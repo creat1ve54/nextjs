@@ -1,0 +1,54 @@
+.team {
+    background-color: #FFFFFF;
+    padding-top: 135px;
+    padding-bottom: 178px;
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 52px;
+        line-height: 72px;
+        font-weight: 300;
+        font-size: 125px;
+        text-transform: uppercase;
+        color: #122163;
+    }
+
+    &__style {
+        margin: 0;
+        padding: 0;
+        font-weight: 900;
+        font-size: 117px;
+        line-height: 120%;
+        text-transform: uppercase;
+        background: linear-gradient(140.57deg, #FC5A5A 0%, #6E74FF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    &__description {
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        color: #283341;
+        opacity: 0.8;
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__case {
+
+        max-width: 445px;
+    }
+
+    img {
+        position: absolute;
+        top: -40px;
+        right: 12px;
+    }
+}

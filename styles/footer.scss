@@ -1,0 +1,131 @@
+.footer {
+    color: #000000;
+    padding-top: 41px;
+
+    &__case {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        margin: 0;
+        bottom: 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+
+    &__info {
+        width: 270px;
+    }
+
+    &__number {
+        margin-bottom: 4px;
+    }
+
+    &__phone {
+        margin: 0;
+        bottom: 0;
+        margin-bottom: 25px;
+        display: block;
+        margin-left: 54px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        color: #FFFFFF;
+
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -51px;
+            width: 46.46px;
+            height: 40.54px;
+            background-image: url('../image/footer/phone.svg');
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__call {
+        margin: 0;
+        bottom: 0;
+        width: 183px;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 130%;
+        color: #FFFFFF;
+        border-bottom: 1px dashed #FFFFFF;
+    }
+
+    &__address {
+        margin: 0;
+        bottom: 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+
+    &__online {
+        margin: 0;
+        bottom: 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+
+    &__style {
+        margin: 0;
+        bottom: 0;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+
+    &__law {
+        margin: 0;
+        bottom: 0;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+        color: #78C0F7;
+        opacity: 0.7;
+    }
+
+    &__under {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        margin-bottom: 16px;
+    }
+
+
+    &__item:nth-child(1) {
+        margin-right: 110px;
+    }
+
+    &__item:nth-child(2) {
+        margin-right: 141px;
+    }
+
+    &__item:nth-child(3) {
+        margin-right: 146px
+    }
+}

@@ -1,0 +1,49 @@
+.stack {
+    background-color: #FFFFFF;
+    padding: 29px 0px 226px;
+
+    &__container {
+        padding: 0px 10px;
+        width: 1180px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 21px;
+        max-width: 602px;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #122163;
+    }
+
+    &__description {
+        padding: 0;
+        margin: 0;
+        max-width: 570px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        color: #283341;
+        opacity: 0.7;
+    }
+
+    &__case {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        padding-left: 25px;
+    }
+
+    img {
+        position: absolute;
+        top: -63px;
+        right: 4px;
+    }
+}

@@ -1,0 +1,97 @@
+.form {
+    padding-top: 88px;
+    padding-bottom: 95px;
+    
+    &__case {
+        display: flex;
+    }
+
+    &__text {
+        padding-top: 113px;
+        max-width: 559px;
+        margin-right: 106px;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 26px;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #78C0F7;
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__description {
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 160%;
+        color: #78C0F7;
+        opacity: 0.8;
+    }
+
+    &__btn {
+        margin-top: 30px;
+        padding: 18px 56px;
+        width: 255px;
+        height: 56px;
+        background: #000000;
+        box-shadow: 0px 0px 21px #3EABFE;
+        border-radius: 200px;
+
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .form__input {
+        resize: none;
+        margin-bottom: 20px;
+        width: 350px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 24px;
+        border-color: #000000;
+        background: #000000;
+        box-shadow: 0px 0px 21px #3EABFE;
+        border-radius: 200px;
+
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+
+        &::placeholder {
+            font-family: 'Mont';
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+        }
+    }
+
+    .form__input:nth-child(2) {
+        margin-bottom: 30px;
+    }
+
+    .form__input:nth-child(4) {
+        border-radius: 25px;
+        padding-bottom: inherit;
+        height: 120px;
+    }
+}

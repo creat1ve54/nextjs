@@ -1,0 +1,144 @@
+.bitoobit {
+    padding: 69px 0px 65px;
+    background-image: url('../image/bitoobit__bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__title {
+        margin: 0 272px;
+        margin-bottom: 50px;
+        width: 632px;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 370px;
+        height: 262px;
+        padding: 51px 32px 43px;
+        position: relative;
+
+        svg {
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            top: 6px;
+            left: 32px;
+            opacity: 0.5;
+            fill: #78C0F7;
+        }
+    }
+
+    &__item:nth-child(1):hover {
+        .bitoobit__caption {
+            transition: all 0.3s ease-in-out;
+            color: #00E09B;
+        }
+
+        svg {
+            transition: all 0.3s ease-in-out;
+            fill: #00E09B;
+            opacity: 1;
+        }
+    }
+
+    &__item:nth-child(2):hover {
+        .bitoobit__caption {
+            transition: all 0.3s ease-in-out;
+            color: #FBDC23;
+        }
+
+        svg {
+            transition: all 0.3s ease-in-out;
+            fill: #FBDC23;
+            opacity: 1;
+        }
+    }
+
+    &__item:nth-child(3):hover {
+        .bitoobit__caption {
+            transition: all 0.3s ease-in-out;
+            color: #005AEC;
+        }
+
+        svg {
+            transition: all 0.3s ease-in-out;
+            fill: #005AEC;
+            opacity: 1;
+        }
+    }
+
+    &__item:nth-child(4):hover {
+        .bitoobit__caption {
+            transition: all 0.3s ease-in-out;
+            color: #00D5D2;
+        }
+
+        svg {
+            transition: all 0.3s ease-in-out;
+            fill: #00D5D2;
+            opacity: 1;
+        }
+    }
+
+    &__item:nth-child(5):hover {
+        .bitoobit__caption {
+            transition: all 0.3s ease-in-out;
+            color: #FD0063;
+        }
+
+        svg {
+            transition: all 0.3s ease-in-out;
+            fill: #FD0063;
+            opacity: 1;
+        }
+    }
+
+    &__item:nth-child(6):hover {
+        .bitoobit__caption {
+            transition: all 0.3s ease-in-out;
+            color: #78C0F7;
+        }
+
+        svg {
+            transition: all 0.3s ease-in-out;
+            fill: #78C0F7;
+            opacity: 1;
+        }
+    }
+
+
+    &__caption {
+        transition: all 0.3s ease-in-out;
+        letter-spacing: -0.3px;
+        margin: 0;
+        margin-left: 54px;
+        margin-bottom: 29px;
+        min-height: 62px;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 130%;
+        color: #78C0F7;
+    }
+
+    &__description {
+        margin: 0;
+        min-height: 78px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 160%;
+        font-feature-settings: 'liga' off;
+        color: #FFFFFF;
+        opacity: 0.8;
+    }
+}

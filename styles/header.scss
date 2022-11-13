@@ -1,0 +1,48 @@
+.header {
+    padding: 24px 0px;
+
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 121px;
+    }
+
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 8px;
+        list-style: none;
+    }
+
+    &__item {
+        margin-right: 40px;
+
+        &--active {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 130%;
+            color: #78C0F7;
+        }
+    }
+
+    &__item:last-child {
+        margin-right: 112px;
+    }
+}
+
+.contacts {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 8px;
+    list-style: none;
+    display: flex;
+
+    &__item:not(:last-child) {
+        margin-right: 40px;
+    }
+}
