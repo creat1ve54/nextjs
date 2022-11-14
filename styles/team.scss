@@ -38,17 +38,13 @@
     }
 
     &__container {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__case {
 
         max-width: 445px;
-    }
-
-    img {
-        position: absolute;
-        top: -40px;
-        right: 12px;
     }
 }

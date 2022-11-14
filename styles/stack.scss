@@ -1,11 +1,11 @@
 .stack {
     background-color: #FFFFFF;
-    padding: 29px 0px 228px;
+    padding: 29px 0px 59px;
     margin-top: -2px;
 
     &__container {
         padding: 0px 10px;
-        width: 1180px;
+        max-width: 1180px;
         margin: 0 auto;
     }
 
@@ -40,11 +40,5 @@
 
     &__text {
         padding-left: 25px;
-    }
-
-    img {
-        position: absolute;
-        top: -63px;
-        right: 4px;
     }
 }

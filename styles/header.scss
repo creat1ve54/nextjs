@@ -5,10 +5,7 @@
     &__container {
         display: flex;
         align-items: center;
-    }
-
-    &__logo {
-        margin-right: 121px;
+        justify-content: space-between;
     }
 
     &__list {
@@ -17,21 +14,17 @@
         padding: 0;
         padding-bottom: 8px;
         list-style: none;
+        justify-content: space-between;
+        width: 47%;
     }
 
     &__item {
-        margin-right: 40px;
-
         &--active {
             font-weight: 600;
             font-size: 16px;
             line-height: 130%;
             color: #78C0F7;
         }
-    }
-
-    &__item:last-child {
-        margin-right: 112px;
     }
 }
 

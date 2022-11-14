@@ -97,7 +97,8 @@
 
 .slider {
   display: flex;
-
+  flex-wrap: wrap;
+  justify-content: center;
   &__title {
     margin: 0;
     padding: 0;

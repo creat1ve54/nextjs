@@ -3,16 +3,18 @@
     padding-bottom: 95px;
     background-image: url('../image/form__bg.png');
     background-repeat: no-repeat;
+    background-size: cover;
 
 
     &__case {
         display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__text {
         padding-top: 113px;
         max-width: 559px;
-        margin-right: 106px;
     }
 
     &__title {

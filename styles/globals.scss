@@ -18,14 +18,10 @@ a {
   box-sizing: border-box;
 }
 
-.web {
-  width: 1440px;
-  margin: 0 auto;
-}
 
 .container {
   padding: 0px 10px;
-  width: 1130px;
+  max-width: 1130px;
   margin: 0 auto;
 }
 

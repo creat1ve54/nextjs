@@ -26,10 +26,12 @@
     }
 
     &__case {
+        flex-wrap: wrap;
         padding: 0;
         margin: 0;
         list-style: none;
         display: flex;
+        justify-content: space-between;
         margin-bottom: 48px;
     }
 
@@ -141,18 +143,6 @@
         margin-bottom: 16px;
     }
 
-
-    &__item:nth-child(1) {
-        margin-right: 110px;
-    }
-
-    &__item:nth-child(2) {
-        margin-right: 141px;
-    }
-
-    &__item:nth-child(3) {
-        margin-right: 183px
-    }
 
     &__social {
         margin-bottom: 13px;

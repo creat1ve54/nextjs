@@ -162,34 +162,38 @@ export default function Home() {
       </div>
       <div className='sites'>
         <ul className='sites__list'>
-          <li className='sites__item'>
-            <Image className='sites__img' src={logo1} alt={'Logo Site'} />
-            <p className='sites__description'>Разработка сайта</p>
-            <h3 className='sites__title'>Тандор</h3>
-          </li>
-          <li className='sites__item sites__imgAnimation' onClick={(e) => onPlayGIf(e.target)}>
-            <Image className='sites__img' src={logo2} alt={'Logo Site'} />
-            <Image className='sites__bgImage' src={bgImage} alt={'Logo Site'} />
-            <p className='sites__description'>Разработка сайта</p>
-            <h3 className='sites__title'>Оптовик</h3>
-          </li>
-          <li className='sites__item'>
-            <Image className='sites__img' src={logo3} alt={'Logo Site'} />
-            <Image className='sites__gif' src={gif} alt={'Gif'} />
-            <p className='sites__description'>Разработка сайта</p>
-            <h3 className='sites__title'>Фортуна</h3>
-          </li>
-          <li className='sites__item sites__imgHover'>
-            <Image className='sites__img' src={logo4} alt={'Logo Site'} />
-            <Image className='sites__unvisibleImg' src={logo45} alt={'Logo Site'} />
+          <div className='sites__case'>
+            <li className='sites__item'>
+              <Image className='sites__img' src={logo1} alt={'Logo Site'} />
+              <p className='sites__description'>Разработка сайта</p>
+              <h3 className='sites__title'>Тандор</h3>
+            </li>
+            <li className='sites__item sites__imgAnimation' onClick={(e) => onPlayGIf(e.target)}>
+              <Image className='sites__img' src={logo2} alt={'Logo Site'} />
+              <Image className='sites__bgImage' src={bgImage} alt={'Logo Site'} />
+              <p className='sites__description'>Разработка сайта</p>
+              <h3 className='sites__title'>Оптовик</h3>
+            </li>
+          </div>
+          <div className='sites__case'>
+            <li className='sites__item'>
+              <Image className='sites__img' src={logo3} alt={'Logo Site'} />
+              <Image className='sites__gif' src={gif} alt={'Gif'} />
+              <p className='sites__description'>Разработка сайта</p>
+              <h3 className='sites__title'>Фортуна</h3>
+            </li>
+            <li className='sites__item sites__imgHover'>
+              <Image className='sites__img' src={logo4} alt={'Logo Site'} />
+              <Image className='sites__unvisibleImg' src={logo45} alt={'Logo Site'} />
 
-            <Image className='sites__unvisibleImgOne' src={logo41} alt={'Logo Site'} />
-            <Image className='sites__unvisibleImgTwo' src={logo42} alt={'Logo Site'} />
-            <Image className='sites__unvisibleImgThree' src={logo43} alt={'Logo Site'} />
-            <Image className='sites__unvisibleImgFour' src={logo44} alt={'Logo Site'} />
-            <p className='sites__description'>Разработка сайта</p>
-            <h3 className='sites__title'>Патрик и Мари</h3>
-          </li>
+              <Image className='sites__unvisibleImgOne' src={logo41} alt={'Logo Site'} />
+              <Image className='sites__unvisibleImgTwo' src={logo42} alt={'Logo Site'} />
+              <Image className='sites__unvisibleImgThree' src={logo43} alt={'Logo Site'} />
+              <Image className='sites__unvisibleImgFour' src={logo44} alt={'Logo Site'} />
+              <p className='sites__description'>Разработка сайта</p>
+              <h3 className='sites__title'>Патрик и Мари</h3>
+            </li>
+          </div>
         </ul>
       </div>
       <div className='stages'>

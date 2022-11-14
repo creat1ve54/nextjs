@@ -2,41 +2,46 @@
   background-image: url("../image/main__bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 80px;
+  padding-bottom: 5.72vw;
   position: relative;
 
   &__btn {
     position: relative;
     z-index: 1;
+
     &::before {
-        content: '';
-        position: absolute;
-        border-radius: 200px;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        z-index: -1;
-        background: linear-gradient(107.4deg, #005aec -2.61%, #08e8dd 104.67%);
-        transition: all 0.4s ease-in-out;
+      content: '';
+      position: absolute;
+      border-radius: 200px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: -1;
+      background: linear-gradient(107.4deg, #005aec -2.61%, #08e8dd 104.67%);
+      transition: all 0.4s ease-in-out;
     }
   }
 
   &__btn:hover {
     background-color: inherit;
     transition: all 0.4s ease-in-out;
+
     &::before {
-        transition: all 0.4s ease-in-out;
-        opacity: 1;
-        background: linear-gradient(107.4deg, #005aec -2.61%, #08e8dd 104.67%);
+      transition: all 0.4s ease-in-out;
+      opacity: 1;
+      background: linear-gradient(107.4deg, #005aec -2.61%, #08e8dd 104.67%);
     }
   }
 
   &__container {
-    margin-top: 507px;
+    margin-top: 35vw;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
     &::before {
       content: "";
       position: absolute;
@@ -53,8 +58,8 @@
     z-index: 3;
     cursor: pointer;
     position: absolute;
-    top: 359px;
-    right: 356px;
+    top: calc((100vw - 1440px) / 2 / 1.3 + 358px);
+    right: calc((100vw - 1440px) / 2 / 1.5 + 355px);
     background-image: url("../image/frame1.png");
     background-repeat: no-repeat;
     width: 268px;
@@ -86,10 +91,6 @@
     letter-spacing: 0.2px;
   }
 
-  &__text {
-    margin-right: 108px;
-  }
-
   &__pineapple {
     z-index: 2;
     position: absolute;
@@ -102,8 +103,8 @@
 
     &--active {
       transition: all 1s ease-in-out;
-      top: 271px;
-      right: 290px;
+      top: calc((100vw - 1440px) / 2 / 1.3 + 271px);
+      right: calc((100vw - 1440px) / 2 / 1.5 + 300px);
     }
   }
 
