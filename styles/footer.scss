@@ -1,12 +1,26 @@
 .footer {
     color: #000000;
-    padding-top: 41px;
+    padding-top: 43px;
+    padding-bottom: 17px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #78C0F7;
+        opacity: 0.1;
+        bottom: 82px;
+        left: 0px;
+    }
 
     &__case {
         padding: 0;
         margin: 0;
         list-style: none;
         display: flex;
+        margin-bottom: 48px;
     }
 
     &__list {
@@ -110,6 +124,7 @@
     &__under {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__link {
@@ -126,6 +141,40 @@
     }
 
     &__item:nth-child(3) {
-        margin-right: 146px
+        margin-right: 183px
+    }
+
+    &__social {
+        margin-bottom: 13px;
+        padding-left: 49px;
+    }
+
+    &__icon:not(:last-child) {
+        margin-right: 12px;
+    }
+
+    &__telegram {
+        box-shadow: 0px 0px 15px #40B3E0;
+    }
+
+    &__viber {
+        box-shadow: 0px 0px 15px #005AEC;
+    }
+
+    &__whatsapp {
+        box-shadow: 0px 0px 15px #00E09B;
+    }
+
+    &__online {
+        padding-left: 10px;
+    }
+
+    &__soc {
+        padding-top: 2px;
+        width: 140px;
+
+        a:not(:last-child) {
+            margin-right: 10px;
+        }
     }
 }

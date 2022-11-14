@@ -49,17 +49,17 @@ const Footer = () => {
                     </li>
                     <li className='footer__item'>
                         <div className='footer__social'>
-                            <a className='footer__telegram' href="##">
-                                <Image src={telegram} alt='Telegram' />
+                            <a className='footer__icon' href="##">
+                                <Image className='footer__telegram' src={telegram} alt='Telegram' />
                             </a>
-                            <a className='footer__viber' href="##">
-                                <Image src={viber} alt='Viber' />
+                            <a className='footer__icon' href="##">
+                                <Image className='footer__viber' src={viber} alt='Viber' />
                             </a>
-                            <a className='footer__whatsapp' href="##">
-                                <Image src={whatsapp} alt='Whatsapp' />
+                            <a className='footer__icon' href="##">
+                                <Image className='footer__whatsapp' src={whatsapp} alt='Whatsapp' />
                             </a>
                         </div>
-                        <a className='footer__online' href="tel:88007775955">Online консультация <br/> <span className='footer__style'>по телефону 8 800 777 59 55</span></a>
+                        <a className='footer__online' href="tel:88007775955">Online консультация <br /> <span className='footer__style'>по телефону 8 800 777 59 55</span></a>
                     </li>
                 </ul>
                 <div className='footer__under'>

@@ -1,171 +1,225 @@
 .reviews {
-    padding-top: 278px;
-    padding-bottom: 101px;
-    background-image: url('../image/reviews__bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0px -49px;
+  padding-top: 278px;
+  padding-bottom: 101px;
+  background-image: url("../image/reviews__bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -49px;
 
-    &__case {
-        max-width: 600px;
-        margin: 0 auto;
-        margin-bottom: 385px;
+
+  // position: relative;
+
+
+  &__container {
+    position: relative;
+  }
+
+  &__company {
+    position: absolute;
+
+    &--reviews1 {
+      top: -211px;
+      left: 201px;
     }
 
-    &__title {
-        margin: 0;
-        padding: 0;
-        margin-bottom: 28px;
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 120%;
-        text-align: center;
-        text-transform: uppercase;
-        color: #78C0F7;
+    &--reviews2 {
+      top: -199px;
+      right: 267px;
     }
 
-    &__description {
-        margin: 0;
-        padding: 0;
-        margin-bottom: 29px;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 160%;
-        text-align: center;
-        color: #FFFFFF;
-        opacity: 0.8;
+    &--reviews3 {
+      top: -53px;
+      right: 15px;
     }
 
-    &__describe {
-        margin: 0;
-        padding: 0;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 160%;
-        text-align: center;
-        color: #78C0F7;
-        opacity: 0.8;
+    &--reviews4 {
+      bottom: -109px;
+      right: 57px;
     }
+
+    &--reviews5 {
+      bottom: -244px;
+      right: 422px;
+    }
+
+    &--reviews6 {
+      bottom: -175px;
+      left: 137px;
+    }
+
+    &--reviews7 {
+      top: -20px;
+      left: 11px;
+    }
+  }
+
+  &__case {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 385px;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 28px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #78c0f7;
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 29px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+
+  &__describe {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+    color: #78c0f7;
+    opacity: 0.8;
+  }
 }
-
 
 .slider {
-    display: flex;
+  display: flex;
 
-    &__title {
-        margin: 0;
-        padding: 0;
-        width: 420px;
-        margin-top: 88px;
-        letter-spacing: -0.1px;
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 150%;
-        color: #78C0F7;
+  &__title {
+    margin: 0;
+    padding: 0;
+    width: 420px;
+    margin-top: 88px;
+    letter-spacing: -0.1px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 150%;
+    color: #78c0f7;
+  }
+
+  &__text {
+    padding-left: 71px;
+  }
+
+  &__profil {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -27px;
+      left: 0px;
+      width: 589px;
+      height: 1px;
+      background: #78c0f7;
+      opacity: 0.3;
     }
 
-    &__text {
-        padding-left: 71px;
+    img {
+      position: absolute;
+      top: -23px;
+      left: -21px;
     }
+  }
 
-    &__profil {
-        position: relative;
+  &__caption {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #78c0f7;
+  }
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: -27px;
-            left: 0px;
-            width: 589px;
-            height: 1px;
-            background: #78C0F7;
-            opacity: 0.3;
-        }
+  &__description {
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    margin-bottom: 54px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    color: #ffffff;
+    opacity: 0.8;
+  }
 
-        img {
-            position: absolute;
-            top: -23px;
-            left: -21px;
-        }
-    }
-
-    &__caption {
-        margin: 0;
-        padding: 0;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        color: #78C0F7;
-    }
-
-    &__description {
-        margin: 0;
-        padding: 0;
-        margin-top: 40px;
-        margin-bottom: 54px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 160%;
-        color: #FFFFFF;
-        opacity: 0.8;
-    }
-
-    &__label {
-        margin: 0;
-        padding: 0;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        color: #78C0F7;
-        opacity: 0.5;
-    }
+  &__label {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #78c0f7;
+    opacity: 0.5;
+  }
 }
-
 
 .swiper-slide {
-    padding-left: 101px;
-    padding-top: 48px;
+  padding-left: 101px;
+  padding-top: 48px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 89px;
+    left: 0;
+    width: 53px;
+    height: 52px;
+    background-image: url('../image/apostrophe.svg');
+  }
 }
 
-
 .swiper {
-    width: 690px;
-    height: 440px;
+  width: 690px;
+  height: 440px;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0;
-    margin-right: 20px;
+  margin: 0;
+  margin-right: 20px;
 }
 
 .swiper-horizontal {
-    .swiper-pagination {
-        top: 24px;
-        left: -203px;
-    }
-
+  .swiper-pagination {
+    top: 24px;
+    left: -203px;
+  }
 }
 
 .swiper-pagination {
-    pointer-events: none;
+  pointer-events: none;
 
-    .swiper-pagination-bullet {
-        background: #78C0F7;
-        opacity: 0.4;
-        width: 6px;
-        height: 6px;
-        margin-right: 10px;
-    }
+  .swiper-pagination-bullet {
+    background: #78c0f7;
+    opacity: 0.4;
+    width: 6px;
+    height: 6px;
+    margin-right: 10px;
+  }
 
-    .swiper-pagination-bullet-active {
-        background: #78C0F7;
-        opacity: 1;
-        width: 10px;
-        height: 10px;
-    }
+  .swiper-pagination-bullet-active {
+    background: #78c0f7;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+  }
 }
 
 .swiper-pagination-bullet:nth-child(2) {
-    top: -10px;
+  top: -10px;
 }

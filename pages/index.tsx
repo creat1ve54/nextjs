@@ -30,11 +30,20 @@ import profil1 from '../image/profil1.png'
 
 import teamImg from '../image/team__img.png'
 
+import reviews1 from '../image/reviews/reviews1.png'
+import reviews2 from '../image/reviews/reviews2.png'
+import reviews3 from '../image/reviews/reviews3.png'
+import reviews4 from '../image/reviews/reviews4.png'
+import reviews5 from '../image/reviews/reviews5.png'
+import reviews6 from '../image/reviews/reviews6.png'
+import reviews7 from '../image/reviews/reviews7.png'
+
 import { StageSvg1, StageSvg2, StageSvg3, StageSvg4, StageSvg5, StageSvg6 } from '../components/svg/StageSvg'
 
 
 import Form from '../components/form/Form';
 import Footer from '../components/footer/Footer';
+
 
 
 export default function Home() {
@@ -60,6 +69,7 @@ export default function Home() {
       <Head>
         <title>Web</title>
         <meta name="description" content="Сайты, интернет-магазины, которые продают" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, uswe" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className='main'>
@@ -73,7 +83,7 @@ export default function Home() {
             <h1 className='main__title'>Сайты, интернет-магазины, которые продают</h1>
           </div>
           <div className='main__link'>
-            <a href="##" className='main__btn btn__shadow'>Узнать стоимость</a>
+            <a href="#form" className='main__btn btn__shadow'>Узнать стоимость</a>
           </div>
         </div>
       </div>
@@ -84,31 +94,31 @@ export default function Home() {
               <h4 className='development__number'>01</h4>
               <h3 className='development__title'>Интернет-<br />магазин</h3>
               <p className='development__description'>Переведёт ваши продажи <br /> в онлайн</p>
-              <a href="##" className='development__btn'>Заказать</a>
+              <a href="#form" className='development__btn'>Заказать</a>
             </li>
             <li className='development__item'>
               <h4 className='development__number'>02</h4>
               <h3 className='development__title'>Корпоротивный<br />сайт</h3>
               <p className='development__description'>Расскажет о&nbsp;ваших ценностях, познакомит с&nbsp;вами клиентов, повысит их&nbsp;лояльность</p>
-              <a href="##" className='development__btn'>Заказать</a>
+              <a href="#form" className='development__btn'>Заказать</a>
             </li>
             <li className='development__item'>
               <h4 className='development__number'>03</h4>
               <h3 className='development__title'>Каталог</h3>
               <p className='development__description'>Покажет все разнообразие ваших товаров и услуг. Позволит продвигаться с помощью поисковых систем</p>
-              <a href="##" className='development__btn'>Заказать</a>
+              <a href="#form" className='development__btn'>Заказать</a>
             </li>
             <li className='development__item'>
               <h4 className='development__number'>04</h4>
               <h3 className='development__title'>Визитка</h3>
               <p className='development__description'>Ничего лишнего, только важное. Оптимальный вариант для экспертов и&nbsp;малых предприятий</p>
-              <a href="##" className='development__btn'>Заказать</a>
+              <a href="#form" className='development__btn'>Заказать</a>
             </li>
             <li className='development__item'>
               <h4 className='development__number'>05</h4>
               <h3 className='development__title'>Landing page</h3>
               <p className='development__description'>Поможет вам обосноваться в&nbsp;интернете. Первый шаг к&nbsp;маркетинговому продвижению</p>
-              <a href="##" className='development__btn'>Заказать</a>
+              <a href="#form" className='development__btn'>Заказать</a>
             </li>
           </ul>
         </div>
@@ -161,13 +171,13 @@ export default function Home() {
             <Image className='sites__img' src={logo2} alt={'Logo Site'} />
             <Image className='sites__bgImage' src={bgImage} alt={'Logo Site'} />
             <p className='sites__description'>Разработка сайта</p>
-            <h3 className='sites__title'>Тандор</h3>
+            <h3 className='sites__title'>Оптовик</h3>
           </li>
           <li className='sites__item'>
             <Image className='sites__img' src={logo3} alt={'Logo Site'} />
             <Image className='sites__gif' src={gif} alt={'Gif'} />
             <p className='sites__description'>Разработка сайта</p>
-            <h3 className='sites__title'>Тандор</h3>
+            <h3 className='sites__title'>Фортуна</h3>
           </li>
           <li className='sites__item sites__imgHover'>
             <Image className='sites__img' src={logo4} alt={'Logo Site'} />
@@ -178,7 +188,7 @@ export default function Home() {
             <Image className='sites__unvisibleImgThree' src={logo43} alt={'Logo Site'} />
             <Image className='sites__unvisibleImgFour' src={logo44} alt={'Logo Site'} />
             <p className='sites__description'>Разработка сайта</p>
-            <h3 className='sites__title'>Тандор</h3>
+            <h3 className='sites__title'>Патрик и Мари</h3>
           </li>
         </ul>
       </div>
@@ -240,6 +250,13 @@ export default function Home() {
       </div>
       <div className='reviews'>
         <div className='reviews__container container'>
+          <Image className='reviews__company reviews__company--reviews1' src={reviews1} alt='Company 1' />
+          <Image className='reviews__company reviews__company--reviews2' src={reviews2} alt='Company 2' />
+          <Image className='reviews__company reviews__company--reviews3' src={reviews3} alt='Company 3' />
+          <Image className='reviews__company reviews__company--reviews4' src={reviews4} alt='Company 4' />
+          <Image className='reviews__company reviews__company--reviews5' src={reviews5} alt='Company 5' />
+          <Image className='reviews__company reviews__company--reviews6' src={reviews6} alt='Company 6' />
+          <Image className='reviews__company reviews__company--reviews7' src={reviews7} alt='Company 7' />
           <div className='reviews__case'>
             <h2 className='reviews__title'>Они доверяют нам</h2>
             <p className='reviews__description'>Мы&nbsp;не&nbsp;просто пишем программы&nbsp;&mdash; нам важен ваш результат. Чтобы вовремя ответить на&nbsp;вопросы и&nbsp;учесть все пожелания, наши разработчики будут постоянно с&nbsp;вами на&nbsp;связи.</p>
@@ -294,7 +311,7 @@ export default function Home() {
           <Image src={teamImg} alt='Team Img' />
         </div>
       </div>
-      <Form title={<Fragment>Мы &nbsp;готовы начать уже сегодня!</Fragment>} descr={<Fragment>Зaпoлнитe пoжaлуйcтa фopму нижe, чтoбы мы&nbsp;< br />cмoгли cвязaтьcя c&nbsp;Baми и&nbsp;oтпpaвить&nbsp;KП</Fragment>} />
+      <Form title={<Fragment>Мы&nbsp;готовы начать уже сегодня!</Fragment>} descr={<Fragment>Зaпoлнитe пoжaлуйcтa фopму нижe, чтoбы мы&nbsp;< br />cмoгли cвязaтьcя c&nbsp;Baми и&nbsp;oтпpaвить&nbsp;KП</Fragment>} />
       <Footer />
     </div >
   )

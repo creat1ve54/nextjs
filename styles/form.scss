@@ -1,7 +1,7 @@
 .form {
     padding-top: 88px;
     padding-bottom: 95px;
-    
+
     &__case {
         display: flex;
     }
@@ -85,13 +85,24 @@
         }
     }
 
-    .form__input:nth-child(2) {
-        margin-bottom: 30px;
+    .form__item:nth-child(2) {
+        .form__input {
+            margin-bottom: 30px;
+        }
     }
 
-    .form__input:nth-child(4) {
-        border-radius: 25px;
-        padding-bottom: inherit;
-        height: 120px;
+    .form__item:nth-child(4) {
+        .form__input {
+            border-radius: 25px;
+            padding-bottom: inherit;
+            height: 120px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 }
