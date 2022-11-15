@@ -91,6 +91,7 @@
       &:hover {
         margin-bottom: 0px;
         z-index: 10;
+
         &::before {
           opacity: 1;
           background: linear-gradient(140.57deg, #00e29b 0%, #78c0f7 100%);
@@ -102,6 +103,7 @@
     .stages__item:nth-child(2) {
       &:hover {
         z-index: 10;
+
         &::before {
           background: linear-gradient(140.57deg, #e4ff98 0%, #fbdc23 100%);
           opacity: 1;
@@ -113,6 +115,7 @@
     .stages__item:nth-child(3) {
       &:hover {
         z-index: 10;
+
         &::before {
           background: linear-gradient(140.57deg, #005aec 14.37%, #08e8dd 100%);
           opacity: 1;
@@ -124,6 +127,7 @@
 
   &__case:nth-child(2) {
     margin-top: -132px;
+
     .stages__item:nth-child(1) {
       &:hover {
         &::before {
@@ -178,7 +182,7 @@
       top: 73px;
       right: -165px;
       width: 300px;
-      height: 1px;
+      height: 2px;
       background-image: url("../image/stages/line2.svg");
       background-repeat: no-repeat;
       z-index: -2;
@@ -192,7 +196,7 @@
       top: 73px;
       right: -165px;
       width: 300px;
-      height: 1px;
+      height: 2px;
       background-image: url("../image/stages/line2.svg");
       background-repeat: no-repeat;
       z-index: -2;
@@ -228,4 +232,98 @@
   &__item:nth-child(3n + 3) {
     margin-right: 0;
   }
+
+
+  &__slider {
+    display: none;
+    .stages__item {
+      pointer-events: none;
+      position: relative;
+      margin: 0 auto;
+
+      &::after {
+        display: none;
+      }
+
+      .stages__description {
+        display: block;
+        opacity: 0.8;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .stages__img {
+        fill: #ffffff;
+        stroke: #ffffff;
+      }
+
+    }
+
+
+    .swiper-slide:nth-child(1) {
+      .stages__item {
+        &::before {
+          opacity: 1;
+          background: linear-gradient(140.57deg, #00e29b 0%, #78c0f7 100%);
+        }
+      }
+    }
+    .swiper-slide:nth-child(2) {
+      .stages__item {
+        &::before {
+          opacity: 1;
+          background: linear-gradient(140.57deg, #e4ff98 0%, #fbdc23 100%);
+        }
+      }
+    }
+    .swiper-slide:nth-child(3) {
+      .stages__item {
+        &::before {
+          opacity: 1;
+          background: linear-gradient(140.57deg, #005AEC 14.37%, #08E8DD 100%);
+        }
+      }
+    }
+    .swiper-slide:nth-child(4) {
+      .stages__item {
+        &::before {
+          opacity: 1;
+          background: linear-gradient(140.57deg, #00D5D2 0%, #51B4FF 100%);
+        }
+      }
+    }
+    .swiper-slide:nth-child(5) {
+      .stages__item {
+        &::before {
+          opacity: 1;
+          background: linear-gradient(140.57deg, #FD0063 0%, #78C0F7 100%);
+        }
+      }
+    }
+    .swiper-slide:nth-child(6) {
+      .stages__item {
+        &::before {
+          opacity: 1;
+          background: linear-gradient(140.57deg, #FC5A5A 0%, #6E74FF 100%);
+        }
+      }
+    }
+  }
 }
+
+// @media (max-width: 1439.8px) {
+//   .stages {
+//     &__case {
+//       flex-direction: column;
+//     }
+
+//     &__list {
+//       flex-wrap: nowrap;
+//       width: 720px;
+//       margin: 0 auto;
+//     }
+
+//     &__case:nth-child(2) {
+//       margin-top: inherit;
+//     }
+//   }
+// }

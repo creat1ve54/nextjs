@@ -94,31 +94,41 @@ export default function Home() {
               <h4 className='development__number'>01</h4>
               <h3 className='development__title'>Интернет-<br />магазин</h3>
               <p className='development__description'>Переведёт ваши продажи <br /> в онлайн</p>
-              <a href="#form" className='development__btn'>Заказать</a>
+              <div>
+                <a href="#form" className='development__btn'>Заказать</a>
+              </div>
             </li>
             <li className='development__item'>
               <h4 className='development__number'>02</h4>
               <h3 className='development__title'>Корпоротивный<br />сайт</h3>
               <p className='development__description'>Расскажет о&nbsp;ваших ценностях, познакомит с&nbsp;вами клиентов, повысит их&nbsp;лояльность</p>
-              <a href="#form" className='development__btn'>Заказать</a>
+              <div>
+                <a href="#form" className='development__btn'>Заказать</a>
+              </div>
             </li>
             <li className='development__item'>
               <h4 className='development__number'>03</h4>
               <h3 className='development__title'>Каталог</h3>
               <p className='development__description'>Покажет все разнообразие ваших товаров и услуг. Позволит продвигаться с помощью поисковых систем</p>
-              <a href="#form" className='development__btn'>Заказать</a>
+              <div>
+                <a href="#form" className='development__btn'>Заказать</a>
+              </div>
             </li>
             <li className='development__item'>
               <h4 className='development__number'>04</h4>
               <h3 className='development__title'>Визитка</h3>
               <p className='development__description'>Ничего лишнего, только важное. Оптимальный вариант для экспертов и&nbsp;малых предприятий</p>
-              <a href="#form" className='development__btn'>Заказать</a>
+              <div>
+                <a href="#form" className='development__btn'>Заказать</a>
+              </div>
             </li>
             <li className='development__item'>
               <h4 className='development__number'>05</h4>
               <h3 className='development__title'>Landing page</h3>
               <p className='development__description'>Поможет вам обосноваться в&nbsp;интернете. Первый шаг к&nbsp;маркетинговому продвижению</p>
-              <a href="#form" className='development__btn'>Заказать</a>
+              <div>
+                <a href="#form" className='development__btn'>Заказать</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -202,7 +212,6 @@ export default function Home() {
           <ul className='stages__list'>
             <div className='stages__case'>
               <li className='stages__item'>
-
                 <StageSvg1 />
                 <h4 className='stages__caption'>Анализируем задачу</h4>
                 <p className='stages__description'>Встречаемся с&nbsp;вами, выясняем ваши потребности, задаем дополнительные вопросы. Чем лучше разработчики будут понимать особенности бизнеса, тем эффективнее будет совместная работа.</p>
@@ -239,6 +248,54 @@ export default function Home() {
               </li>
             </div>
           </ul>
+          <div className='stages__slider'>
+            <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+              <SwiperSlide>
+                <li className='stages__item'>
+                  <StageSvg1 />
+                  <h4 className='stages__caption'>Анализируем задачу</h4>
+                  <p className='stages__description'>Встречаемся с&nbsp;вами, выясняем ваши потребности, задаем дополнительные вопросы. Чем лучше разработчики будут понимать особенности бизнеса, тем эффективнее будет совместная работа.</p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='stages__item'>
+                  <StageSvg2 />
+                  <h4 className='stages__caption'>Утверждаем ТЗ</h4>
+                  <p className='stages__description'>Оформляем в&nbsp;виде технического задания пожелания к&nbsp;функционалу и&nbsp;оформлению сайта. Согласовываем его с&nbsp;вами.</p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='stages__item'>
+                  <StageSvg3 />
+                  <h4 className='stages__caption'>Разрабатываем прототип</h4>
+                  <p className='stages__description'>Создаем прототип сайта&nbsp;&mdash; его схематичную версию с&nbsp;основными функциональными блоками и&nbsp;структурными элементами: меню и&nbsp;кнопками. Прописываем логику работы сайта. Прежде чем перейти к&nbsp;дальнейшему этапу, согласовываем прототип с&nbsp;вами.</p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='stages__item'>
+                  <StageSvg6 />
+                  <h4 className='stages__caption'>Разрабатываем дизайн</h4>
+                  <p className='stages__description'>К&nbsp;работе приступают дизайнеры, которые на&nbsp;базе брендбука и&nbsp;прототипа создают стильное и&nbsp;функциональное оформление сайта.</p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='stages__item'>
+                  <div className='stages__hover'>
+                    <StageSvg5 />
+                    <h4 className='stages__caption'>Программируем и тестируем</h4>
+                    <p className='stages__description'>Разработчики пишут код и&nbsp;тестируют все функции сайта</p>
+                  </div>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='stages__item'>
+                  <StageSvg4 />
+                  <h4 className='stages__caption'>Внедряем и сопровождаем сайт</h4>
+                  <p className='stages__description'>Вводим новый сайт в&nbsp;вашу IT-систему (объединяем с&nbsp;1С, CRM и&nbsp;т.д.), составляем и&nbsp;отправляем вам всю необходимую документацию.</p>
+                </li>
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </div>
       </div>
       <div className='stack'>
@@ -269,7 +326,7 @@ export default function Home() {
         </div>
         <div className='reviews__slider slider container'>
           <h3 className='slider__title'>Лучшая награда для нас - <br /> отзывы наших клиентов</h3>
-          <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+          <Swiper pagination={true} modules={[Pagination]} className="swiper--one">
             <SwiperSlide>
               <p className='slider__description'>Работаю с&nbsp;битубитом не&nbsp;очень давно, но&nbsp;уже в&nbsp;восторге. Никакого навязывания услуг&nbsp;&mdash; наоборот, очень помогли понять, что именно мне нужно, и&nbsp;грамотно расставить приоритеты. Сайтом очень довольна! Выглядит очень стильно, пользоваться удобно&nbsp;&mdash; так логично все выстроено, любой разберется. Так довольна результатами, что теперь думаю: может, мне новый бизнес запустить, раз таких помощников с&nbsp;сайтами себе нашла? У&nbsp;меня всегда с&nbsp;этим был затык, а&nbsp;теперь я&nbsp;спокойна. А&nbsp;главное&nbsp;&mdash; прибыль уже идет!</p>
               <div className='slider__profil'>
