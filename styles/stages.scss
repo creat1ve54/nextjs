@@ -236,10 +236,12 @@
 
   &__slider {
     display: none;
+
     .stages__item {
       pointer-events: none;
       position: relative;
       margin: 0 auto;
+      height: 347px;
 
       &::after {
         display: none;
@@ -256,6 +258,15 @@
         stroke: #ffffff;
       }
 
+      .stages__caption {
+        color: #FFFFFF;
+      }
+
+    }
+
+
+    .swiper-wraper {
+      height: 400px;
     }
 
 
@@ -267,6 +278,7 @@
         }
       }
     }
+
     .swiper-slide:nth-child(2) {
       .stages__item {
         &::before {
@@ -275,6 +287,7 @@
         }
       }
     }
+
     .swiper-slide:nth-child(3) {
       .stages__item {
         &::before {
@@ -283,6 +296,7 @@
         }
       }
     }
+
     .swiper-slide:nth-child(4) {
       .stages__item {
         &::before {
@@ -291,6 +305,7 @@
         }
       }
     }
+
     .swiper-slide:nth-child(5) {
       .stages__item {
         &::before {
@@ -299,6 +314,7 @@
         }
       }
     }
+
     .swiper-slide:nth-child(6) {
       .stages__item {
         &::before {
@@ -310,20 +326,12 @@
   }
 }
 
-// @media (max-width: 1439.8px) {
-//   .stages {
-//     &__case {
-//       flex-direction: column;
-//     }
+@media (max-width: 1199px) {
+  .stages__slider {
+    display: block;
+  }
 
-//     &__list {
-//       flex-wrap: nowrap;
-//       width: 720px;
-//       margin: 0 auto;
-//     }
-
-//     &__case:nth-child(2) {
-//       margin-top: inherit;
-//     }
-//   }
-// }
+  .stages__list {
+    display: none;
+  }
+}
