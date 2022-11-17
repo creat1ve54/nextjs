@@ -160,6 +160,41 @@
   }
 }
 
+
+
+@media (max-width: 2560px) {
+  .main {
+    &__container {
+      &::before {
+        top: calc((100vw - 1440px) / 6.5 + 149px);
+        left: calc((100vw - 1440px) / 6 + 41px);
+      }
+    }
+
+    &__frame {
+      top: calc((100vw - 1440px) / 2.5 + 358px);
+      right: calc((100vw - 1440px) / 3 + 355px);
+    }
+
+    &__pineapple {
+      &--active {
+        top: calc((100vw - 1440px) / 2.5 + 271px);
+        right: calc((100vw - 1440px) / 3 + 300px);
+      }
+    }
+
+    &__gamepad {
+      &--active {
+        top: calc((100vw - 1440px) / 6.5 + 215px);
+        left: calc((100vw - 1440px) / 6 + 118px);
+      }
+    }
+  }
+}
+
+
+
+
 @media (max-width: 1199px) {
   .main {
     background-image: url('../image/main__mobil.png');
