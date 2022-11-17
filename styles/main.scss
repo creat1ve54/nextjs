@@ -1,29 +1,102 @@
 .main {
-  background-image: url("../image/main__bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 5.72vw;
-  position: relative;
+  &__one {
+    background-image: url("../image/main__bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 5.72vw;
+    position: relative;
+
+
+    .main__container {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 268px;
+        height: 257px;
+        top: 149px;
+        left: 41px;
+        background-image: url("../image/frame2.png");
+        background-repeat: no-repeat;
+      }
+    }
+
+
+    .main__frame {
+      z-index: 3;
+      cursor: pointer;
+      position: absolute;
+      top: calc((100vw - 1440px) / 3.3 + 358px);
+      right: calc((100vw - 1440px) / 3.5 + 355px);
+      background-image: url("../image/frame1.png");
+      background-repeat: no-repeat;
+      width: 268px;
+      height: 257px;
+    }
+
+    .main__btn {
+      &::before {
+        content: '';
+        position: absolute;
+        border-radius: 200px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+        background: linear-gradient(107.4deg, #005aec -2.61%, #08e8dd 104.67%);
+        transition: all 0.4s ease-in-out;
+      }
+    }
+
+    .main__pineapple {
+      z-index: 2;
+      position: absolute;
+      top: -264px;
+      right: 357px;
+      background-image: url("../image/pineapple.png");
+      background-repeat: no-repeat;
+      width: 268px;
+      height: 257px;
+
+      &--active {
+        transition: all 1s ease-in-out;
+        top: calc((100vw - 1440px) / 3.3 + 271px);
+        right: calc((100vw - 1440px) / 3.5 + 300px);
+      }
+    }
+
+    .main__gamepad {
+      position: absolute;
+      top: 50px;
+      left: -360px;
+      background-image: url("../image/gamepad.png");
+      background-repeat: no-repeat;
+      width: 268px;
+      height: 257px;
+
+      &--active {
+        transition: all 1s ease-in-out;
+        top: 215px;
+        left: 118px;
+      }
+    }
+  }
+
+  &__two {
+    background-image: url("../image/mobileapp/main__bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // padding-bottom: 5.72vw;
+    // position: relative;
+  }
+
 
   &__btn {
     position: relative;
     z-index: 1;
     display: block;
     width: 212px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      border-radius: 200px;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      z-index: -1;
-      background: linear-gradient(107.4deg, #005aec -2.61%, #08e8dd 104.67%);
-      transition: all 0.4s ease-in-out;
-    }
   }
 
   &__btn:hover {
@@ -42,29 +115,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 268px;
-      height: 257px;
-      top: 149px;
-      left: 41px;
-      background-image: url("../image/frame2.png");
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__frame {
-    z-index: 3;
-    cursor: pointer;
-    position: absolute;
-    top: calc((100vw - 1440px) / 3.3 + 358px);
-    right: calc((100vw - 1440px) / 3.5 + 355px);
-    background-image: url("../image/frame1.png");
-    background-repeat: no-repeat;
-    width: 268px;
-    height: 257px;
   }
 
   &__case {
@@ -92,120 +142,114 @@
     letter-spacing: 0.2px;
   }
 
-  &__pineapple {
-    z-index: 2;
-    position: absolute;
-    top: -264px;
-    right: 357px;
-    background-image: url("../image/pineapple.png");
-    background-repeat: no-repeat;
-    width: 268px;
-    height: 257px;
+}
 
-    &--active {
-      transition: all 1s ease-in-out;
-      top: calc((100vw - 1440px) / 3.3 + 271px);
-      right: calc((100vw - 1440px) / 3.5 + 300px);
+
+@media (max-width: 2560px) {
+  .main {
+
+    &__one {
+      .main__container {
+        &::before {
+          top: calc((100vw - 1440px) / 6.5 + 149px);
+          left: calc((100vw - 1440px) / 6 + 41px);
+        }
+      }
+
+      .main__frame {
+        top: calc((100vw - 1440px) / 2.5 + 358px);
+        right: calc((100vw - 1440px) / 3 + 355px);
+      }
+
+      .main__pineapple {
+        &--active {
+          top: calc((100vw - 1440px) / 2.5 + 271px);
+          right: calc((100vw - 1440px) / 3 + 300px);
+        }
+      }
+
+      .main__gamepad {
+        &--active {
+          top: calc((100vw - 1440px) / 6.5 + 215px);
+          left: calc((100vw - 1440px) / 6 + 118px);
+        }
+      }
     }
-  }
 
-  &__gamepad {
-    position: absolute;
-    top: 50px;
-    left: -360px;
-    background-image: url("../image/gamepad.png");
-    background-repeat: no-repeat;
-    width: 268px;
-    height: 257px;
-
-    &--active {
-      transition: all 1s ease-in-out;
-      top: 215px;
-      left: 118px;
-    }
   }
 }
 
 @media (max-width: 1439px) {
   .main {
-    &__frame {
-      top: calc((100vw - 1024px) / 3.3 + 252px);
-      right: calc((100vw - 1024px) / 2.3 + 161px);
-      transform: scale(0.7);
-    }
-
-    &__pineapple {
-      &--active {
+    &__one {
+      .main__frame {
+        top: calc((100vw - 1024px) / 3.3 + 252px);
+        right: calc((100vw - 1024px) / 2.3 + 161px);
         transform: scale(0.7);
-        top: calc((100vw - 1024px) / 3.3 + 190px);
-        right: calc((100vw - 1024px) / 2.3 + 113px);
+      }
+
+      .main__pineapple {
+        &--active {
+          transform: scale(0.7);
+          top: calc((100vw - 1024px) / 3.3 + 190px);
+          right: calc((100vw - 1024px) / 2.3 + 113px);
+        }
+      }
+
+      .main__gamepad {
+        &--active {
+          transform: scale(0.7);
+          top: 112px;
+          left: 68px;
+        }
+      }
+
+      .main__container {
+        &::before {
+          transform: scale(0.7);
+          top: 66px;
+          left: 19px;
+        }
       }
     }
 
-    &__gamepad {
-      &--active {
-        transform: scale(0.7);
-        top: 112px;
-        left: 68px;
-      }
-    }
-
-    &__container {
-      &::before {
-        transform: scale(0.7);
-        top: 66px;
-        left: 19px;
-      }
-    }
   }
 }
-
-
-
-@media (max-width: 2560px) {
-  .main {
-    &__container {
-      &::before {
-        top: calc((100vw - 1440px) / 6.5 + 149px);
-        left: calc((100vw - 1440px) / 6 + 41px);
-      }
-    }
-
-    &__frame {
-      top: calc((100vw - 1440px) / 2.5 + 358px);
-      right: calc((100vw - 1440px) / 3 + 355px);
-    }
-
-    &__pineapple {
-      &--active {
-        top: calc((100vw - 1440px) / 2.5 + 271px);
-        right: calc((100vw - 1440px) / 3 + 300px);
-      }
-    }
-
-    &__gamepad {
-      &--active {
-        top: calc((100vw - 1440px) / 6.5 + 215px);
-        left: calc((100vw - 1440px) / 6 + 118px);
-      }
-    }
-  }
-}
-
 
 
 
 @media (max-width: 1199px) {
   .main {
-    background-image: url('../image/main__mobil.png');
-    background-size: contain;
-    background-position: 30px 106px;
+    &__one {
+      background-image: url('../image/main__mobil.png');
+      background-size: contain;
+      background-position: 30px 106px;
 
-    &__container {
-      &::before {
+      .main__container {
+        &::before {
+          transform: scale(0.5);
+          top: 44px;
+          left: -74px;
+        }
+      }
+
+      .main__frame {
+        pointer-events: none;
+        top: calc((100vw - 768px) / 3 + 169px);
+        right: calc((100vw - 768px) / 2.6 + 128px);
+      }
+
+      .main__pineapple {
+        transform: scale(0.7);
+        opacity: 1;
+        top: calc((100vw - 768px) / 3 + 104px);
+        right: calc((100vw - 768px) / 2.6 + 81px);
+      }
+
+      .main__gamepad {
         transform: scale(0.5);
-        top: 44px;
-        left: -74px;
+        top: 77px;
+        left: -37px;
       }
     }
 
@@ -217,24 +261,6 @@
       font-size: 20px;
     }
 
-    &__frame {
-      pointer-events: none;
-      top: calc((100vw - 768px) / 3 + 169px);
-      right: calc((100vw - 768px) / 2.6 + 128px);
-    }
-
-    &__pineapple {
-      transform: scale(0.7);
-      opacity: 1;
-      top: calc((100vw - 768px) / 3 + 104px);
-      right: calc((100vw - 768px) / 2.6 + 81px);
-    }
-
-    &__gamepad {
-      transform: scale(0.5);
-      top: 77px;
-      left: -37px;
-    }
   }
 }
 
@@ -244,37 +270,40 @@
     overflow: hidden;
     padding-bottom: 160px;
 
-    &__container {
-      flex-direction: column;
-      align-items: inherit;
-      margin-top: 255px;
+    &__one {
+      .main__container {
+        flex-direction: column;
+        align-items: inherit;
+        margin-top: 255px;
 
-      &::before {
+        &::before {
+          transform: scale(0.4);
+          top: 55px;
+          left: -86px;
+        }
+      }
+
+      .main__frame {
+        transform: scale(0.5);
+        pointer-events: none;
+        top: calc((100vw - 425px) / 3 + 75px);
+        right: calc((100vw - 425px) / 2.6 + 0px);
+      }
+
+      .main__pineapple {
+        transform: scale(0.5);
+        opacity: 1;
+        top: calc((100vw - 425px) / 3 + 30px);
+        right: calc((100vw - 425px) / 2.6 + -30px);
+      }
+
+      .main__gamepad {
         transform: scale(0.4);
-        top: 55px;
-        left: -86px;
+        top: 81px;
+        left: -57px;
       }
     }
 
-    &__frame {
-      transform: scale(0.5);
-      pointer-events: none;
-      top: calc((100vw - 425px) / 3 + 75px);
-      right: calc((100vw - 425px) / 2.6 + 0px);
-    }
-
-    &__pineapple {
-      transform: scale(0.5);
-      opacity: 1;
-      top: calc((100vw - 425px) / 3 + 30px);
-      right: calc((100vw - 425px) / 2.6 + -30px);
-    }
-
-    &__gamepad {
-      transform: scale(0.4);
-      top: 81px;
-      left: -57px;
-    }
 
     &__text {
       margin-bottom: 40px;
@@ -284,32 +313,34 @@
 
 @media (max-width: 425px) {
   .main {
-    &__frame {
-      transform: scale(0.4);
-      pointer-events: none;
-      top: calc((100vw - 320px) / 3 + 48px);
-      right: calc((100vw - 320px) / 2.6 + -43px);
-    }
+    &__one {
+      .main__frame {
+        transform: scale(0.4);
+        pointer-events: none;
+        top: calc((100vw - 320px) / 3 + 48px);
+        right: calc((100vw - 320px) / 2.6 + -43px);
+      }
 
-    &__pineapple {
-      transform: scale(0.4);
-      opacity: 1;
-      top: calc((100vw - 320px) / 3 + 14px);
-      right: calc((100vw - 320px) / 2.6 - 64px);
-    }
+      .main__pineapple {
+        transform: scale(0.4);
+        opacity: 1;
+        top: calc((100vw - 320px) / 3 + 14px);
+        right: calc((100vw - 320px) / 2.6 - 64px);
+      }
 
-    &__gamepad {
-      transform: scale(0.3);
-      top: 42px;
-      left: -72px;
-    }
-
-
-    &__container {
-      &::before {
+      .main__gamepad {
         transform: scale(0.3);
-        top: 24px;
-        left: -95px;
+        top: 42px;
+        left: -72px;
+      }
+
+
+      .main__container {
+        &::before {
+          transform: scale(0.3);
+          top: 24px;
+          left: -95px;
+        }
       }
     }
   }

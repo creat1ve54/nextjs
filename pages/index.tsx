@@ -1,12 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Fragment, useState } from 'react'
-import { setTimeout } from 'timers'
+import { FC, Fragment, useState } from 'react'
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 
-import Header from '../components/header/Header'
 import BitoobitSvg from '../components/svg/BitoobitSvg'
 
 
@@ -43,17 +41,31 @@ import { StageSvg1, StageSvg2, StageSvg3, StageSvg4, StageSvg5, StageSvg6 } from
 
 import Form from '../components/form/Form';
 import Footer from '../components/footer/Footer';
+import Main from '../components/main/Main';
+import Development from '../components/development/Development';
+
+
+
+export interface IDevelopmentMain {
+  number: string,
+  title: string,
+  description: string,
+}
+
+
+const DevelopmentMainInfo: IDevelopmentMain[] = [
+  { number: '01', title: 'Интернет-магазин', description: 'Переведёт ваши продажи в онлайн' },
+  { number: '02', title: 'Корпоротивный сайт', description: 'Расскажет о ваших ценностях, познакомит с вами клиентов, повысит их лояльность' },
+  { number: '03', title: 'Каталог', description: 'Покажет все разнообразие ваших товаров и услуг. Позволит продвигаться с помощью поисковых систем' },
+  { number: '04', title: 'Визитка', description: 'Ничего лишнего, только важное. Оптимальный вариант для экспертов и малых предприятий' },
+  { number: '05', title: 'Landing page', description: 'Поможет вам обосноваться в интернете. Первый шаг к маркетинговому продвижению' },
+]
 
 
 
 export default function Home() {
 
   const [click, setClick] = useState(true)
-
-  const onGoAnimation = () => {
-    document.querySelector('.main__pineapple')?.classList.add('main__pineapple--active')
-    setTimeout(() => { document.querySelector('.main__gamepad')?.classList.add('main__gamepad--active') }, 1500)
-  }
 
   const onPlayGIf = () => {
     setClick(!click)
@@ -72,67 +84,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, uswe" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <div className='main'>
-        <div className='main__frame' onClick={onGoAnimation}></div>
-        <div className='main__pineapple'></div>
-        <div className='main__gamepad'></div>
-        <Header />
-        <div className='main__container container'>
-          <div className='main__text'>
-            <h2 className='main__caption'>Мы не обещаем, мы делаем!</h2>
-            <h1 className='main__title'>Сайты, интернет-магазины, которые продают</h1>
-          </div>
-          <div className='main__link'>
-            <a href="#form" className='main__btn btn__shadow'>Узнать стоимость</a>
-          </div>
-        </div>
-      </div>
-      <div className='development'>
-        <div className='development__container'>
-          <ul className='development__list'>
-            <li className='development__item'>
-              <h4 className='development__number'>01</h4>
-              <h3 className='development__title'>Интернет-магазин</h3>
-              <p className='development__description'>Переведёт ваши продажи в онлайн</p>
-              <div>
-                <a href="#form" className='development__btn'>Заказать</a>
-              </div>
-            </li>
-            <li className='development__item'>
-              <h4 className='development__number'>02</h4>
-              <h3 className='development__title'>Корпоротивный сайт</h3>
-              <p className='development__description'>Расскажет о&nbsp;ваших ценностях, познакомит с&nbsp;вами клиентов, повысит их&nbsp;лояльность</p>
-              <div>
-                <a href="#form" className='development__btn'>Заказать</a>
-              </div>
-            </li>
-            <li className='development__item'>
-              <h4 className='development__number'>03</h4>
-              <h3 className='development__title'>Каталог</h3>
-              <p className='development__description'>Покажет все разнообразие ваших товаров и услуг. Позволит продвигаться с помощью поисковых систем</p>
-              <div>
-                <a href="#form" className='development__btn'>Заказать</a>
-              </div>
-            </li>
-            <li className='development__item'>
-              <h4 className='development__number'>04</h4>
-              <h3 className='development__title'>Визитка</h3>
-              <p className='development__description'>Ничего лишнего, только важное. Оптимальный вариант для экспертов и&nbsp;малых предприятий</p>
-              <div>
-                <a href="#form" className='development__btn'>Заказать</a>
-              </div>
-            </li>
-            <li className='development__item'>
-              <h4 className='development__number'>05</h4>
-              <h3 className='development__title'>Landing page</h3>
-              <p className='development__description'>Поможет вам обосноваться в&nbsp;интернете. Первый шаг к&nbsp;маркетинговому продвижению</p>
-              <div>
-                <a href="#form" className='development__btn'>Заказать</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <Main className='main__one' caption='Мы не обещаем, мы делаем!' title='Сайты, интернет-магазины, которые продают' />
+      <Development className='development__one' info={DevelopmentMainInfo} />
       <div className='bitoobit'>
         <div className='bitoobit__container container'>
           <h2 className='bitoobit__title'>Сайты от Bitoobit - это</h2>
@@ -424,7 +377,7 @@ export default function Home() {
           <Image src={teamImg} alt='Team Img' />
         </div>
       </div>
-      <Form title={<Fragment>Мы&nbsp;готовы начать уже сегодня!</Fragment>} descr={<Fragment>Зaпoлнитe пoжaлуйcтa фopму нижe, чтoбы мы&nbsp;cмoгли cвязaтьcя c&nbsp;Baми и&nbsp;oтпpaвить&nbsp;KП</Fragment>} />
+      <Form title={'Мы готовы начать уже сегодня!'} descr={'Зaпoлнитe пoжaлуйcтa фopму нижe, чтoбы мы cмoгли cвязaтьcя c Baми и oтпpaвить KП'} />
       <Footer />
     </div >
   )

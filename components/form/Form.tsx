@@ -5,8 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 interface FormProps {
-    title: any,
-    descr: any,
+    title: string,
+    descr: string,
 }
 
 const Form: FC<FormProps> = ({ title, descr }) => {
