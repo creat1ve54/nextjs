@@ -2,7 +2,7 @@
     padding: 24px 0px;
 
 
-    &__container {
+    &__case {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -19,11 +19,143 @@
     }
 
     &__item {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 130%;
+
         &--active {
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 130%;
             color: #78C0F7;
+        }
+    }
+
+
+    &__mobile {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            transform: scale(0.73);
+        }
+    }
+
+    &__burger {
+        cursor: pointer;
+        width: 40px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            left: 0px;
+            top: 0px;
+            background: #FFFFFF;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            right: 0px;
+            bottom: 0px;
+            opacity: 1;
+            background: #FFFFFF;
+            transition: all 0.3s ease-in-out;
+        }
+
+        span {
+            display: block;
+            opacity: 1;
+            width: 40px;
+            height: 2px;
+            background: #FFFFFF;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &--active {
+            span {
+                opacity: 0;
+                transition: all 0.4s ease-in-out;
+            }
+
+            &::after {
+                transform: rotate(45deg);
+                transition: all 0.4s ease-in-out;
+            }
+
+            &::before {
+                bottom: 18px;
+                transform: rotate(-45deg);
+                width: 40px;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+    }
+}
+
+.popup {
+    &__one {
+        transition: all 0.4s ease-in-out;
+        display: none;
+        background-color: #000000;
+        z-index: 3;
+        position: absolute;
+        width: 100%;
+        height: 360px;
+        right: -767px;
+
+
+        &--active {
+            transition: all 0.4s ease-in-out;
+            right: 0;
+        }
+
+        .popup__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: end;
+        }
+
+        .popup__item {
+            position: relative;
+
+            a {
+                display: block;
+                padding: 19px 32px 19px 0px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                height: 1px;
+                width: 100%;
+                background-color: #FFFFFF;
+                opacity: 0.1;
+            }
+        }
+
+        .popup__item:last-child {
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                height: 1px;
+                width: 100%;
+                background-color: #FFFFFF;
+                opacity: 0.1;
+            }
         }
     }
 }
@@ -37,5 +169,48 @@
 
     &__item:not(:last-child) {
         margin-right: 40px;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .header {
+
+        &__logo {
+            transform: scale(0.8);
+        }
+
+        &__item {
+            font-size: 14px;
+        }
+
+        &__item:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+
+    .contacts__item:not(:last-child) {
+        margin-right: 5px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .header {
+        padding: 0;
+
+        &__mobile {
+            display: flex;
+        }
+
+        &__case {
+            display: none;
+        }
+    }
+
+    .popup {
+        &__one {
+            display: block;
+        }
     }
 }

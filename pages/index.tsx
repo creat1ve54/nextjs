@@ -26,7 +26,7 @@ import bgImage from '../image/sites/logo2.1.png'
 
 import stackImg from '../image/stack__img.png'
 
-import profil1 from '../image/profil1.png'
+import profil1 from '../image/profil1.svg'
 
 import teamImg from '../image/team__img.png'
 
@@ -50,12 +50,12 @@ export default function Home() {
 
   const [click, setClick] = useState(true)
 
-  const onGoAnimation = (e: EventTarget) => {
+  const onGoAnimation = () => {
     document.querySelector('.main__pineapple')?.classList.add('main__pineapple--active')
     setTimeout(() => { document.querySelector('.main__gamepad')?.classList.add('main__gamepad--active') }, 1500)
   }
 
-  const onPlayGIf = (e: EventTarget) => {
+  const onPlayGIf = () => {
     setClick(!click)
     if (click) {
       document.querySelector('.sites__imgAnimation')?.classList.add('sites__item--active')
@@ -73,7 +73,7 @@ export default function Home() {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className='main'>
-        <div className='main__frame' onClick={(e) => onGoAnimation(e.target)}></div>
+        <div className='main__frame' onClick={onGoAnimation}></div>
         <div className='main__pineapple'></div>
         <div className='main__gamepad'></div>
         <Header />
@@ -92,15 +92,15 @@ export default function Home() {
           <ul className='development__list'>
             <li className='development__item'>
               <h4 className='development__number'>01</h4>
-              <h3 className='development__title'>Интернет-<br />магазин</h3>
-              <p className='development__description'>Переведёт ваши продажи <br /> в онлайн</p>
+              <h3 className='development__title'>Интернет-магазин</h3>
+              <p className='development__description'>Переведёт ваши продажи в онлайн</p>
               <div>
                 <a href="#form" className='development__btn'>Заказать</a>
               </div>
             </li>
             <li className='development__item'>
               <h4 className='development__number'>02</h4>
-              <h3 className='development__title'>Корпоротивный<br />сайт</h3>
+              <h3 className='development__title'>Корпоротивный сайт</h3>
               <p className='development__description'>Расскажет о&nbsp;ваших ценностях, познакомит с&nbsp;вами клиентов, повысит их&nbsp;лояльность</p>
               <div>
                 <a href="#form" className='development__btn'>Заказать</a>
@@ -164,10 +164,56 @@ export default function Home() {
             </li>
             <li className='bitoobit__item'>
               <BitoobitSvg />
-              <h3 className='bitoobit__caption'>Передача всех<br />доступов</h3>
+              <h3 className='bitoobit__caption'>Передача всех доступов</h3>
               <p className='bitoobit__description'>По&nbsp;окончанию работы над проектом передаем все доступы и&nbsp;исключительные права на&nbsp;проект</p>
             </li>
           </ul>
+          <div className='bitoobit__slider'>
+            <Swiper pagination={true} modules={[Pagination]} className="swiper--two">
+              <SwiperSlide>
+                <li className='bitoobit__item'>
+                  <BitoobitSvg />
+                  <h3 className='bitoobit__caption'>Любая сложность</h3>
+                  <p className='bitoobit__description'>10&nbsp;лет успешной работы, в&nbsp;разработке сайтов для бизнеса</p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='bitoobit__item'>
+                  <BitoobitSvg />
+                  <h3 className='bitoobit__caption'>Удобство и надежность</h3>
+                  <p className='bitoobit__description'>Срок, перечень работ и&nbsp;цена закреплены в&nbsp;договоре. Не&nbsp;навязываем сопровождение</p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='bitoobit__item'>
+                  <BitoobitSvg />
+                  <h3 className='bitoobit__caption'>Опытные разработчики</h3>
+                  <p className='bitoobit__description'>Более 20&nbsp;сотрудников в&nbsp;штате. Мы&nbsp;гарантируем строгое соблюдение сроков</p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='bitoobit__item'>
+                  <BitoobitSvg />
+                  <h3 className='bitoobit__caption'>Безопасность данных</h3>
+                  <p className='bitoobit__description'>Особое внимание уделяем безопасности и&nbsp;защищенности ваших данных</p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='bitoobit__item'>
+                  <BitoobitSvg />
+                  <h3 className='bitoobit__caption'>Функциональность</h3>
+                  <p className='bitoobit__description'>Создаем сайты, с&nbsp;которыми удобно работать на&nbsp;любом устройстве: планшете, телефоне или&nbsp;ПК</p>
+                </li>
+              </SwiperSlide>
+              <SwiperSlide>
+                <li className='bitoobit__item'>
+                  <BitoobitSvg />
+                  <h3 className='bitoobit__caption'>Передача всехдоступов</h3>
+                  <p className='bitoobit__description'>По&nbsp;окончанию работы над проектом передаем все доступы и&nbsp;исключительные права на&nbsp;проект</p>
+                </li>
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </div>
       </div>
       <div className='sites'>
@@ -178,7 +224,7 @@ export default function Home() {
               <p className='sites__description'>Разработка сайта</p>
               <h3 className='sites__title'>Тандор</h3>
             </li>
-            <li className='sites__item sites__imgAnimation' onClick={(e) => onPlayGIf(e.target)}>
+            <li className='sites__item sites__imgAnimation' onClick={onPlayGIf}>
               <Image className='sites__img' src={logo2} alt={'Logo Site'} />
               <Image className='sites__bgImage' src={bgImage} alt={'Logo Site'} />
               <p className='sites__description'>Разработка сайта</p>
@@ -311,21 +357,27 @@ export default function Home() {
       </div>
       <div className='reviews'>
         <div className='reviews__container container'>
-          <Image className='reviews__company reviews__company--reviews1' src={reviews1} alt='Company 1' />
-          <Image className='reviews__company reviews__company--reviews2' src={reviews2} alt='Company 2' />
-          <Image className='reviews__company reviews__company--reviews3' src={reviews3} alt='Company 3' />
-          <Image className='reviews__company reviews__company--reviews4' src={reviews4} alt='Company 4' />
-          <Image className='reviews__company reviews__company--reviews5' src={reviews5} alt='Company 5' />
-          <Image className='reviews__company reviews__company--reviews6' src={reviews6} alt='Company 6' />
-          <Image className='reviews__company reviews__company--reviews7' src={reviews7} alt='Company 7' />
-          <div className='reviews__case'>
+          <div className='reviews__case reviews__case--one'>
             <h2 className='reviews__title'>Они доверяют нам</h2>
             <p className='reviews__description'>Мы&nbsp;не&nbsp;просто пишем программы&nbsp;&mdash; нам важен ваш результат. Чтобы вовремя ответить на&nbsp;вопросы и&nbsp;учесть все пожелания, наши разработчики будут постоянно с&nbsp;вами на&nbsp;связи.</p>
             <p className='reviews__describe'>Мы&nbsp;работаем с&nbsp;любыми бизнес-направлениями &mdash; <br />и&nbsp;они только выигрывают от&nbsp;этого.</p>
           </div>
+          <div className='reviews__case reviews__case--two'>
+            <div className='reviews__case reviews__case--three'>
+              <Image className='reviews__company reviews__company--reviews1' src={reviews1} alt='Company 1' />
+              <Image className='reviews__company reviews__company--reviews7' src={reviews7} alt='Company 7' />
+              <Image className='reviews__company reviews__company--reviews6' src={reviews6} alt='Company 6' />
+              <Image className='reviews__company reviews__company--reviews5' src={reviews5} alt='Company 5' />
+            </div>
+            <div className='reviews__case reviews__case--four'>
+              <Image className='reviews__company reviews__company--reviews2' src={reviews2} alt='Company 2' />
+              <Image className='reviews__company reviews__company--reviews3' src={reviews3} alt='Company 3' />
+              <Image className='reviews__company reviews__company--reviews4' src={reviews4} alt='Company 4' />
+            </div>
+          </div>
         </div>
         <div className='reviews__slider slider container'>
-          <h3 className='slider__title'>Лучшая награда для нас - <br /> отзывы наших клиентов</h3>
+          <h3 className='slider__title'>Лучшая награда для нас - отзывы наших клиентов</h3>
           <Swiper pagination={true} modules={[Pagination]} className="swiper--one">
             <SwiperSlide>
               <p className='slider__description'>Работаю с&nbsp;битубитом не&nbsp;очень давно, но&nbsp;уже в&nbsp;восторге. Никакого навязывания услуг&nbsp;&mdash; наоборот, очень помогли понять, что именно мне нужно, и&nbsp;грамотно расставить приоритеты. Сайтом очень довольна! Выглядит очень стильно, пользоваться удобно&nbsp;&mdash; так логично все выстроено, любой разберется. Так довольна результатами, что теперь думаю: может, мне новый бизнес запустить, раз таких помощников с&nbsp;сайтами себе нашла? У&nbsp;меня всегда с&nbsp;этим был затык, а&nbsp;теперь я&nbsp;спокойна. А&nbsp;главное&nbsp;&mdash; прибыль уже идет!</p>
@@ -372,7 +424,7 @@ export default function Home() {
           <Image src={teamImg} alt='Team Img' />
         </div>
       </div>
-      <Form title={<Fragment>Мы&nbsp;готовы начать уже сегодня!</Fragment>} descr={<Fragment>Зaпoлнитe пoжaлуйcтa фopму нижe, чтoбы мы&nbsp;< br />cмoгли cвязaтьcя c&nbsp;Baми и&nbsp;oтпpaвить&nbsp;KП</Fragment>} />
+      <Form title={<Fragment>Мы&nbsp;готовы начать уже сегодня!</Fragment>} descr={<Fragment>Зaпoлнитe пoжaлуйcтa фopму нижe, чтoбы мы&nbsp;cмoгли cвязaтьcя c&nbsp;Baми и&nbsp;oтпpaвить&nbsp;KП</Fragment>} />
       <Footer />
     </div >
   )

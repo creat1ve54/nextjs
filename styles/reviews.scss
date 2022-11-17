@@ -52,9 +52,11 @@
   }
 
   &__case {
-    max-width: 600px;
-    margin: 0 auto;
-    margin-bottom: 385px;
+    &--one {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 385px;
+    }
   }
 
   &__title {
@@ -95,13 +97,12 @@
 
   .slider {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 
     &__title {
       margin: 0;
       padding: 0;
-      width: 420px;
+      max-width: 420px;
       margin-top: 88px;
       letter-spacing: -0.1px;
       font-weight: 800;
@@ -110,28 +111,25 @@
       color: #78c0f7;
     }
 
-    &__text {
-      padding-left: 71px;
-    }
-
     &__profil {
       position: relative;
+      display: flex;
+      align-items: center;
+
+
+      img {
+        margin-right: 20px;
+      }
 
       &::before {
         content: "";
         position: absolute;
         top: -27px;
         left: 0px;
-        width: 589px;
+        width: 100%;
         height: 1px;
         background: #78c0f7;
         opacity: 0.3;
-      }
-
-      img {
-        position: absolute;
-        top: -23px;
-        left: -21px;
       }
     }
 
@@ -169,26 +167,30 @@
 
   .swiper-slide {
     padding-left: 101px;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 89px;
+      left: 0;
+      width: 53px;
+      height: 52px;
+      background-image: url("../image/apostrophe.svg");
+    }
+
     &--one {
       padding-left: 101px;
       padding-top: 48px;
       position: relative;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 89px;
-        left: 0;
-        width: 53px;
-        height: 52px;
-        background-image: url("../image/apostrophe.svg");
-      }
+
     }
   }
 
   .swiper {
-    width: 690px;
-    height: 440px;
+    max-width: 690px;
+    height: 100%;
   }
 
   .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -226,5 +228,97 @@
   .swiper-pagination-bullet:nth-child(2) {
     top: -10px;
   }
+}
 
+
+@media (max-width: 1199px) {
+  .reviews {
+
+    &__title {
+      text-align: inherit;
+    }
+
+    &__description {
+      text-align: inherit;
+    }
+
+    &__describe {
+      text-align: inherit;
+    }
+
+    &__company {
+      position: inherit;
+    }
+
+    &__case {
+
+      &--one {
+        margin-bottom: 67px;
+      }
+
+      &--two {
+        display: flex;
+        justify-content: center;
+      }
+
+      &--three {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &--four {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .slider {
+      align-items: center;
+      flex-direction: column;
+
+      &__title {
+        margin-bottom: 24px;
+      }
+    }
+
+    .swiper {
+      width: 100%;
+    }
+
+    .swiper-slide {
+      display: inline-table; 
+      height: auto;
+      padding-left: inherit;
+      padding: 0px 32px;
+
+      &::before {
+        top: 0px;
+        left: 32px;
+      }
+    }
+
+    .swiper-horizontal .swiper-pagination {
+      position: absolute;
+      top: 32px;
+      left: inherit;
+      right: 0px;
+      height: 30px;
+      width: 90px;
+    }
+  }
+}
+
+
+@media (max-width: 425px) {
+  .reviews {
+    padding-top: 50px;
+    padding-bottom: 77px;
+  }
+  .slider__description {
+    font-size: 14px;
+  }
+
+  .slider__title {
+    font-size: 22px;
+  }
 }

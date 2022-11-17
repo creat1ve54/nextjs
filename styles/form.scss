@@ -9,7 +9,6 @@
     &__case {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
     }
 
     &__text {
@@ -62,7 +61,7 @@
         color: #FFFFFF;
     }
 
-    .form__input {
+    &__input {
         resize: none;
         margin-bottom: 20px;
         width: 350px;
@@ -109,5 +108,44 @@
         list-style: none;
         margin: 0;
         padding: 0;
+    }
+}
+
+@media (max-width:1023px) {
+    .form {
+        &__case {
+            flex-direction: column;
+        }
+
+        &__text {
+            margin: 0 auto;
+        }
+
+        &__info {
+            margin-top: 40px;
+        }
+
+        &__input {
+            width: 311px;
+        }
+
+    }
+}
+
+@media (max-width: 425px) {
+    .form {
+        margin-top: 50px;
+        margin-bottom: 80px;
+        &__title {
+            font-size: 32px;
+        }
+
+        &__text {
+            padding-top: 0;
+        }
+
+        &__description {
+            font-size: 16px;
+        }
     }
 }

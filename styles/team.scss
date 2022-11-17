@@ -40,11 +40,48 @@
     &__container {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
     }
 
     &__case {
-
         max-width: 445px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .team {
+
+        img {
+            transform: scale(0.8);
+        }
+
+        &__title {
+            line-height: 38px;
+            font-size: 89.3678px;
+        }
+
+        &__style {
+            font-size: 83.6483px;
+        }
+        &__container {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__case {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+
+@media (max-width: 425px) {
+    .team {
+        padding-top: 42px;
+        padding-bottom: 59px;
+        &__description {
+            font-size: 16px;
+        }
+        img {
+            transform: scale(0.6);
+        }
     }
 }
