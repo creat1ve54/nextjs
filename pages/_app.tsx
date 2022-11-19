@@ -14,6 +14,10 @@ import '../styles/reviews.scss'
 import '../styles/team.scss'
 import '../styles/form.scss'
 import '../styles/footer.scss'
+import '../styles/working.scss'
+import '../styles/mobile.scss'
+import '../styles/applications.scss'
+import '../styles/price.scss'
 
 
 import type { AppProps } from 'next/app'

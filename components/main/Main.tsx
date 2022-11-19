@@ -13,10 +13,26 @@ const Main: FC<MainProps> = ({ className, caption, title }) => {
         document.querySelector('.main__pineapple')?.classList.add('main__pineapple--active')
         setTimeout(() => { document.querySelector('.main__gamepad')?.classList.add('main__gamepad--active') }, 1500)
     }
+
+    const onGoMainTwoAnimation = () => {
+        document.querySelector('.main__animation')?.classList.add('main__animation--active')
+        document.querySelector('.main__animation')?.setAttribute('style', 'pointer-events: none', )
+        document.querySelector('.main__animation--two')?.setAttribute('style', 'pointer-events: none')
+        document.querySelector('.main__phone__one')?.classList.add('main__phone__one--active')
+        setTimeout(() => { document.querySelector('.main__phone__one')?.classList.remove('main__phone__one--active') }, 1500)
+        setTimeout(() => { document.querySelector('.main__phone__two')?.classList.add('main__phone__two--active') }, 3000)
+        setTimeout(() => { document.querySelector('.main__phone__two')?.classList.remove('main__phone__two--active') }, 4500)
+        setTimeout(() => { document.querySelector('.main__phone__three')?.classList.add('main__phone__three--active') }, 6000)
+    }
     return (
         <div className={`main ${className}`}>
             <div className='main__frame' onClick={onGoAnimation}></div>
             <div className='main__pineapple'></div>
+            <div className='main__animation' onClick={onGoMainTwoAnimation}></div>
+            <div className='main__animation main__animation--two' onClick={onGoMainTwoAnimation} ></div>
+            <div className='main__phone main__phone__one'></div>
+            <div className='main__phone main__phone__two'></div>
+            <div className='main__phone main__phone__three'></div>
             <div className='main__gamepad'></div>
             <Header />
             <div className='main__container container'>

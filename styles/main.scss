@@ -1,6 +1,6 @@
 .main {
   &__one {
-    background-image: url("../image/main__bg.png");
+    background-image: url("../image/main__bg__one.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 5.72vw;
@@ -84,12 +84,110 @@
   }
 
   &__two {
-    background-image: url("../image/mobileapp/main__bg.png");
+    background-image: url("../image/main__bg.png");
+
     background-repeat: no-repeat;
     background-size: cover;
-    // padding-bottom: 5.72vw;
-    // position: relative;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5.72vw;
+
+    .main__animation {
+      cursor: pointer;
+      position: absolute;
+      background-image: url('../image/main__text.png');
+      top: 162px;
+      left: -157px;
+      width: 120%;
+      height: 100%;
+      background-repeat: no-repeat;
+      z-index: 2;
+
+
+      &--two {
+        position: absolute;
+        background-image: url('../image/main__text__o.png');
+        top: 381px;
+        left: 844px;
+        width: 31%;
+        height: 29%;
+        background-repeat: no-repeat;
+        z-index: 4;
+      }
+    }
+
+    .main__phone {
+      position: absolute;
+      width: 250px;
+      height: 500px;
+      transition: all 0.5s ease-in-out;
+
+      &__one {
+        background-image: url('../image/phone__animation.png');
+        background-repeat: no-repeat;
+        top: 54px;
+        left: 221px;
+        transform: rotate(0) scale(0.5);
+        z-index: 1;
+        transition: all 0.5s ease-in-out;
+
+        &--active {
+          top: 7px;
+          left: 158px;
+          transform: rotate(-22deg) scale(0.5);
+          z-index: 1;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      &__two {
+        background-image: url('../image/phone__animation.png');
+        background-repeat: no-repeat;
+        transform: rotate(0) scale(0.5);
+        top: 222px;
+        left: 533px;
+        transition: all 0.5s ease-in-out;
+
+        &--active {
+          transform: rotate(28deg) scale(0.5);
+          top: 222px;
+          left: 571px;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+
+      &__three {
+        opacity: 0;
+        top: 210px;
+        left: 975px;
+        transform: scale(0.6);
+        background-image: url('../image/phone__animation.png');
+        background-repeat: no-repeat;
+        z-index: 3;
+        transition: all 0.5s ease-in-out;
+
+        &--active {
+          opacity: 1;
+          top: 129px;
+          left: 975px;
+          transform: scale(0.6);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
   }
+
+  &__link {
+    cursor: pointer;
+    z-index: 5;
+  }
+
+
+
+  &__text {
+    z-index: 5;
+  }
+
 
 
   &__btn {
@@ -213,6 +311,58 @@
       }
     }
 
+    &__two {
+      .main__animation {
+        top: 51px;
+        left: -285px;
+        width: 150%;
+        transform: scale(0.8);
+
+        &--two {
+          top: calc((100vw - 1024px) / 28 + 261px);
+          left: calc((100vw - 1024px) / 6.7 + 619px);
+          width: 500px;
+          height: 300px;
+        }
+      }
+    }
+
+
+    .main__phone__one {
+      top: calc((100vw - 1024px) / 10 + 17px);
+      left: calc((100vw - 1024px) / 7.4 + 133px);
+      transform: scale(0.4);
+
+      &--active {
+        top: calc((100vw - 1024px) / 17 - 57px);
+        left: calc((100vw - 1024px) / 6.4 + 95px);
+        transform: rotate(-22deg) scale(0.4);
+      }
+    }
+
+    .main__phone__two {
+      top: calc((100vw - 1024px) / 25 + 120px);
+      left: calc((100vw - 1024px) / 7 + 386px);
+      transform: scale(0.4);
+
+      &--active {
+        top: calc((100vw - 1024px) / 25 + 107px);
+        left: calc((100vw - 1024px) / 7 + 430px);
+        transform: rotate(28deg) scale(0.4);
+
+      }
+    }
+
+    .main__phone__three {
+      top: calc((100vw - 1024px) / 25 + 129px);
+      left: calc((100vw - 1024px) / 7 + 754px);
+      transform: scale(0.4);
+
+      &--active {
+        top: calc((100vw - 1024px) / 25 + 57px);
+        left: calc((100vw - 1024px) / 7 + 754px);
+      }
+    }
   }
 }
 
@@ -264,6 +414,40 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .main {
+    &__two {
+      .main__animation {
+        width: 337%;
+        left: calc((100vw - 768px) / 33.6 - 764px);
+        transform: scale(0.6);
+        pointer-events: none;
+
+        &--two {
+          top: calc((100vw - 768px) / 28 + 241px);
+          left: calc((100vw - 768px) / 1.42 + 254px);
+          width: 500px;
+          height: 300px;
+        }
+      }
+    }
+
+    .main__phone__one {
+      display: none;
+    }
+
+    .main__phone__two {
+      display: none;
+    }
+
+    .main__phone__three {
+      opacity: 1;
+      top: calc((100vw - 768px) / 25 + 39px);
+      left: calc((100vw - 768px) / 1.44 + 384px);
+    }
+  }
+}
+
 
 @media (max-width: 767px) {
   .main {
@@ -305,6 +489,42 @@
     }
 
 
+    &__two {
+      .main__container {
+        flex-direction: column;
+        align-items: inherit;
+        margin-top: 255px;
+      }
+
+      .main__animation {
+        width: 2300px;
+        top: -120px;
+        transform: scale(0.4);
+        left: calc((100vw - 425px) / 20 - 846px);
+
+        &--two {
+          top: 108px;
+          left: calc((100vw - 425px) / 20 + 95px);
+          width: 500px;
+          height: 300px;
+        }
+      }
+
+      .main__text {
+        max-width: 400px;
+      }
+
+      .main__phone__three {
+        opacity: 1;
+        transform: scale(0.2);
+        top: calc((100vw - 425px) / 101 - 44px);
+        left: calc((100vw - 425px) / 21 + 223px);
+      }
+
+    }
+
+
+
     &__text {
       margin-bottom: 40px;
     }
@@ -343,5 +563,29 @@
         }
       }
     }
+
+    &__two {
+      .main__animation {
+
+        top: -171px;
+        transform: scale(0.3);
+        left: calc((100vw - 320px) / 20 - 956px);
+
+        &--two {
+          top: 85px;
+          left: calc((100vw - 320px) / 20 - 25.8px);
+        }
+      }
+
+      .main__phone__three {
+        top: calc((100vw - 425px) / 101 - 67px);
+        left: calc((100vw - 425px) / 21 + 107px);
+      }
+
+      .main__text {
+        max-width: 320px;
+      }
+    }
+
   }
 }

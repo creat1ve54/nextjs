@@ -43,6 +43,7 @@ import Form from '../components/form/Form';
 import Footer from '../components/footer/Footer';
 import Main from '../components/main/Main';
 import Development from '../components/development/Development';
+import StagesItem from '../components/stagesItem/StagesItem';
 
 
 
@@ -53,6 +54,14 @@ export interface IDevelopmentMain {
 }
 
 
+export interface IStagesItem {
+  img: React.ReactNode,
+  title: string,
+  description: string,
+}
+
+
+
 const DevelopmentMainInfo: IDevelopmentMain[] = [
   { number: '01', title: 'Интернет-магазин', description: 'Переведёт ваши продажи в онлайн' },
   { number: '02', title: 'Корпоротивный сайт', description: 'Расскажет о ваших ценностях, познакомит с вами клиентов, повысит их лояльность' },
@@ -61,6 +70,14 @@ const DevelopmentMainInfo: IDevelopmentMain[] = [
   { number: '05', title: 'Landing page', description: 'Поможет вам обосноваться в интернете. Первый шаг к маркетинговому продвижению' },
 ]
 
+const StagesItemMain: IStagesItem[] = [
+  { img: <StageSvg1 />, title: 'Анализируем задачу', description: 'Встречаемся с вами, выясняем ваши потребности, задаем дополнительные вопросы. Чем лучше разработчики будут понимать особенности бизнеса, тем эффективнее будет совместная работа.' },
+  { img: <StageSvg2 />, title: 'Утверждаем ТЗ', description: 'Оформляем в виде технического задания пожелания к функционалу и оформлению сайта. Согласовываем его с вами.' },
+  { img: <StageSvg3 />, title: 'Разрабатываем прототип', description: 'Создаем прототип сайта  — его схематичную версию с основными функциональными блоками и структурными элементами: меню и кнопками. Прописываем логику работы сайта. Прежде чем перейти к дальнейшему этапу, согласовываем прототип с вами.' },
+  { img: <StageSvg4 />, title: 'Внедряем и сопровождаем сайт', description: 'Вводим новый сайт в вашу IT-систему (объединяем с 1С, CRM и т.д.), составляем и отправляем вам всю необходимую документацию.' },
+  { img: <StageSvg5 />, title: 'Программируем и тестируем', description: 'Разработчики пишут код и тестируют все функции сайта' },
+  { img: <StageSvg6 />, title: 'Разрабатываем дизайн', description: 'К работе приступают дизайнеры, которые на базе брендбука и прототипа создают стильное и функциональное оформление сайта.' },
+]
 
 
 export default function Home() {
@@ -205,98 +222,7 @@ export default function Home() {
           </div>
         </ul>
       </div>
-      <div className='stages'>
-        <div className='stages__container'>
-          <h2 className='stages__title'>Этапы работы над проектом</h2>
-          <ul className='stages__list'>
-            <div className='stages__case'>
-              <li className='stages__item'>
-                <StageSvg1 />
-                <h4 className='stages__caption'>Анализируем задачу</h4>
-                <p className='stages__description'>Встречаемся с&nbsp;вами, выясняем ваши потребности, задаем дополнительные вопросы. Чем лучше разработчики будут понимать особенности бизнеса, тем эффективнее будет совместная работа.</p>
-
-              </li>
-              <li className='stages__item'>
-                <StageSvg2 />
-                <h4 className='stages__caption'>Утверждаем ТЗ</h4>
-                <p className='stages__description'>Оформляем в&nbsp;виде технического задания пожелания к&nbsp;функционалу и&nbsp;оформлению сайта. Согласовываем его с&nbsp;вами.</p>
-              </li>
-              <li className='stages__item'>
-                <StageSvg3 />
-                <h4 className='stages__caption'>Разрабатываем прототип</h4>
-                <p className='stages__description'>Создаем прототип сайта&nbsp;&mdash; его схематичную версию с&nbsp;основными функциональными блоками и&nbsp;структурными элементами: меню и&nbsp;кнопками. Прописываем логику работы сайта. Прежде чем перейти к&nbsp;дальнейшему этапу, согласовываем прототип с&nbsp;вами.</p>
-              </li>
-            </div>
-            <div className='stages__case'>
-              <li className='stages__item'>
-                <StageSvg4 />
-                <h4 className='stages__caption'>Внедряем и сопровождаем сайт</h4>
-                <p className='stages__description'>Вводим новый сайт в&nbsp;вашу IT-систему (объединяем с&nbsp;1С, CRM и&nbsp;т.д.), составляем и&nbsp;отправляем вам всю необходимую документацию.</p>
-              </li>
-              <li className='stages__item'>
-                <div className='stages__hover'>
-                  <StageSvg5 />
-                  <h4 className='stages__caption'>Программируем и тестируем</h4>
-                  <p className='stages__description'>Разработчики пишут код и&nbsp;тестируют все функции сайта</p>
-                </div>
-              </li>
-              <li className='stages__item'>
-                <StageSvg6 />
-                <h4 className='stages__caption'>Разрабатываем дизайн</h4>
-                <p className='stages__description'>К&nbsp;работе приступают дизайнеры, которые на&nbsp;базе брендбука и&nbsp;прототипа создают стильное и&nbsp;функциональное оформление сайта.</p>
-              </li>
-            </div>
-          </ul>
-          <div className='stages__slider'>
-            <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-              <SwiperSlide>
-                <li className='stages__item'>
-                  <StageSvg1 />
-                  <h4 className='stages__caption'>Анализируем задачу</h4>
-                  <p className='stages__description'>Встречаемся с&nbsp;вами, выясняем ваши потребности, задаем дополнительные вопросы. Чем лучше разработчики будут понимать особенности бизнеса, тем эффективнее будет совместная работа.</p>
-                </li>
-              </SwiperSlide>
-              <SwiperSlide>
-                <li className='stages__item'>
-                  <StageSvg2 />
-                  <h4 className='stages__caption'>Утверждаем ТЗ</h4>
-                  <p className='stages__description'>Оформляем в&nbsp;виде технического задания пожелания к&nbsp;функционалу и&nbsp;оформлению сайта. Согласовываем его с&nbsp;вами.</p>
-                </li>
-              </SwiperSlide>
-              <SwiperSlide>
-                <li className='stages__item'>
-                  <StageSvg3 />
-                  <h4 className='stages__caption'>Разрабатываем прототип</h4>
-                  <p className='stages__description'>Создаем прототип сайта&nbsp;&mdash; его схематичную версию с&nbsp;основными функциональными блоками и&nbsp;структурными элементами: меню и&nbsp;кнопками. Прописываем логику работы сайта. Прежде чем перейти к&nbsp;дальнейшему этапу, согласовываем прототип с&nbsp;вами.</p>
-                </li>
-              </SwiperSlide>
-              <SwiperSlide>
-                <li className='stages__item'>
-                  <StageSvg6 />
-                  <h4 className='stages__caption'>Разрабатываем дизайн</h4>
-                  <p className='stages__description'>К&nbsp;работе приступают дизайнеры, которые на&nbsp;базе брендбука и&nbsp;прототипа создают стильное и&nbsp;функциональное оформление сайта.</p>
-                </li>
-              </SwiperSlide>
-              <SwiperSlide>
-                <li className='stages__item'>
-                  <div className='stages__hover'>
-                    <StageSvg5 />
-                    <h4 className='stages__caption'>Программируем и тестируем</h4>
-                    <p className='stages__description'>Разработчики пишут код и&nbsp;тестируют все функции сайта</p>
-                  </div>
-                </li>
-              </SwiperSlide>
-              <SwiperSlide>
-                <li className='stages__item'>
-                  <StageSvg4 />
-                  <h4 className='stages__caption'>Внедряем и сопровождаем сайт</h4>
-                  <p className='stages__description'>Вводим новый сайт в&nbsp;вашу IT-систему (объединяем с&nbsp;1С, CRM и&nbsp;т.д.), составляем и&nbsp;отправляем вам всю необходимую документацию.</p>
-                </li>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </div>
-      </div>
+      <StagesItem info={StagesItemMain} className={'stages--one'} />
       <div className='stack'>
         <div className='stack__container'>
           <div className='stack__case'>
