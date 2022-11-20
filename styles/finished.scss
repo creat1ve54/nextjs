@@ -189,6 +189,13 @@
                     opacity: 1;
                 }
             }
+
+            .finished__description {
+                z-index: 10;
+            }
+            .finished__title {
+                z-index: 10;
+            }
         }
     }
 }
