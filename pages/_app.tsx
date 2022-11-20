@@ -18,6 +18,9 @@ import '../styles/working.scss'
 import '../styles/mobile.scss'
 import '../styles/applications.scss'
 import '../styles/price.scss'
+import '../styles/phase.scss'
+import '../styles/services.scss'
+import '../styles/finished.scss'
 
 
 import type { AppProps } from 'next/app'

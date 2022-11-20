@@ -9,6 +9,10 @@ export const StageSvg1 = () => {
                 <stop stopColor='var(--color-stop)' />
                 <stop offset="1" stopColor='var(--color-bot)' />
             </linearGradient>
+            <linearGradient id="da" x1="23.875" y1="27.5556" x2="51.6108" y2="59.9941" gradientUnits="userSpaceOnUse">
+                <stop stopColor='var(--color-stop)' />
+                <stop offset="1" stopColor='var(--color-bot)' />
+            </linearGradient>
         </svg>
     )
 }

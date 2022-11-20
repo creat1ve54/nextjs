@@ -69,14 +69,15 @@ const MobileApp = () => {
         }
     }
     return (
-        <div className='mobileapp'>
+        <>
             <Head>
                 <title>MobileApp</title>
                 <meta name="description" content="Разработка мобильных приложенийдля вашего бизнеса и Startup" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, uswe" />
+                <meta name="keywords" content="разработка, приложения, создание, Front-end, UX/UI, Back-end, Разработка сайта" />
                 {/* <link rel="icon" href="/favicon.ico" /> */}
             </Head>
-            <Main className='main__two' caption='Ищете лучшее цифровое решение ваших задач?' title='Разработка мобильных приложенийдля вашего бизнеса и Startup' />
+            <Main className='main__two' caption='Ищете лучшее цифровое решение ваших задач?' title={<React.Fragment>Разработка мобильных приложений <br/> для вашего бизнеса и Startup</React.Fragment>} />
             <Development className='development__two' info={DevelopmentMobileAppInfo} />
             <div className='working'>
                 <div className='working__container container'>
@@ -214,7 +215,7 @@ const MobileApp = () => {
             </div>
             <Form title='Давайте обсудим Ваш проект!' descr='Оставьте заявку и мы с Вами обязательно свяжемся в течение 10 мин' />
             <Footer />
-        </div>
+        </>
     )
 }
 

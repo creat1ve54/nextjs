@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 interface InfoItem {
     img: React.ReactNode,
     title: string,
-    description: string,
+    description?: string,
 }
 
 

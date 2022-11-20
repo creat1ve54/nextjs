@@ -57,7 +57,7 @@ export interface IDevelopmentMain {
 export interface IStagesItem {
   img: React.ReactNode,
   title: string,
-  description: string,
+  description?: string,
 }
 
 
@@ -94,11 +94,13 @@ export default function Home() {
   }
 
   return (
-    <div className='web'>
+    <>
       <Head>
         <title>Web</title>
+        <meta http-equiv="content-language" content="ru" />
         <meta name="description" content="Сайты, интернет-магазины, которые продают" />
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, uswe" />
+        <meta name="keywords" content="современныe технология, сайты, разработка, сайты любой сложности, безопасность, защита" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <Main className='main__one' caption='Мы не обещаем, мы делаем!' title='Сайты, интернет-магазины, которые продают' />
@@ -305,6 +307,6 @@ export default function Home() {
       </div>
       <Form title={'Мы готовы начать уже сегодня!'} descr={'Зaпoлнитe пoжaлуйcтa фopму нижe, чтoбы мы cмoгли cвязaтьcя c Baми и oтпpaвить KП'} />
       <Footer />
-    </div >
+    </ >
   )
 }

@@ -1,0 +1,96 @@
+.phase {
+    background-color: #FFFFFF;
+    padding: 120px 0px;
+
+    &__case {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__form {
+        padding: 40px;
+        max-width: 350px;
+        height: 291px;
+        background: linear-gradient(140.57deg, #FC5A5A 0%, #6E74FF 100%);
+        border-radius: 20px;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+        font-weight: 600px;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    &__input {
+        margin: 0;
+        padding: 0;
+        padding-left: 42px;
+        margin-bottom: 16px;
+        width: 252px;
+        height: 55px;
+        background: #FFFFFF;
+        border-radius: 200px;
+        border-color: #FFFFFF;
+        border-width: inherit;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #999999;
+    }
+
+    &__btn {
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin: 0 auto;
+        padding: 18px 32px;
+        width: 177px;
+        height: 56px;
+        background: #000000;
+        border-color: #FFFFFF;
+        border-width: inherit;
+        border-radius: 200px;
+
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+
+    }
+}
+
+
+@media (max-width:1023px) {
+    .phase {
+        &__case {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .phase {
+        .stages__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__form {
+            padding: 20px;
+        }
+
+        &__input {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 16px;
+        }
+    }
+}

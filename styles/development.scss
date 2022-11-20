@@ -504,8 +504,9 @@
       &::after {
         pointer-events: none;
         content: "";
+        transform: rotate(45deg);
         bottom: -73px;
-        left: 94px;
+        left: 302px;
         position: absolute;
         width: 60vh;
         height: 100%;
@@ -562,9 +563,10 @@
 
       &::after {
         content: "";
+        transform: rotate(-85deg);
         pointer-events: none;
         bottom: -70px;
-        left: -60px;
+        left: 70px;
         position: absolute;
         width: 57vh;
         height: 350px;
@@ -623,7 +625,8 @@
       &::after {
         content: "";
         pointer-events: none;
-        bottom: 176px;
+        transform: scale(0.5);
+        bottom: -161px;
         left: 0px;
         position: absolute;
         width: 60vh;
@@ -671,8 +674,8 @@
       &::after {
         content: "";
         pointer-events: none;
-        bottom: 33px;
-        left: -180px;
+        bottom: -162px;
+        left: 345px;
         position: absolute;
         width: 600px;
         height: 350px;
@@ -720,7 +723,8 @@
         content: "";
         pointer-events: none;
         bottom: 0px;
-        right: -366px;
+        transform: rotate(-58deg);
+        left: 147px;
         position: absolute;
         width: 500px;
         height: 350px;
@@ -766,8 +770,8 @@
       &::after {
         content: "";
         pointer-events: none;
-        bottom: 0px;
-        right: -366px;
+        bottom: -259px;
+        right: -224px;
         position: absolute;
         width: 500px;
         height: 350px;
@@ -791,6 +795,7 @@
 
       &::after {
         transition: all 0.3s ease-in-out;
+        transform: rotate(0deg);
         opacity: 1;
         bottom: 40px;
         left: calc((100vw - 1440px) / 3 + 304px);
@@ -827,6 +832,7 @@
       }
 
       &::after {
+        transform: inherit;
         transition: all 0.3s ease-in-out;
         opacity: 1;
         bottom: 17px;
@@ -942,6 +948,7 @@
       }
 
       &::after {
+        transform: inherit;
         transition: all 0.3s ease-in-out;
         opacity: 1;
         bottom: -42px;
