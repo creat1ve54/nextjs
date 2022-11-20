@@ -13,8 +13,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import uuid from 'react-uuid'
 import Image from 'next/image'
 
-import { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 
 import animation1 from '../image/project/project__animation/project__animation1.png'
@@ -212,7 +210,11 @@ const Project = () => {
                                     }
                                 </ul>
                                 <div className='services__down'>
-                                    <div className='services__click' onClick={onItemState}>Скрыть</div>
+                                    <div className='services__click' onClick={onItemState}>
+                                        {
+                                            !click ? 'Развернуть' : 'Скрыть'
+                                        }
+                                    </div>
                                 </div>
                                 <div className='services__price'>
                                     <p>26 000 ₽</p>
