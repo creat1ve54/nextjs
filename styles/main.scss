@@ -387,6 +387,14 @@
     }
   }
 
+  &__four {
+    background-image: url("../image/software__bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 5.72vw;
+    position: relative;
+  }
+
   &__link {
     cursor: pointer;
     z-index: 5;
@@ -637,6 +645,14 @@
         }
       }
 
+    }
+
+    &__four {
+      .main__container {
+        flex-direction: column;
+        justify-content: inherit;
+        align-items: inherit;
+      }
     }
 
     .main__project__one {

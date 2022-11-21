@@ -21,6 +21,11 @@ import '../styles/price.scss'
 import '../styles/phase.scss'
 import '../styles/services.scss'
 import '../styles/finished.scss'
+import '../styles/comparison.scss'
+import '../styles/portfolio.scss'
+import '../styles/technology.scss'
+import '../styles/clients.scss'
+import '../styles/comment.scss'
 
 
 import type { AppProps } from 'next/app'

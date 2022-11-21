@@ -44,9 +44,6 @@ const Header = () => {
                         <li className={router.pathname === '/software' ? 'header__item header__item--active' : 'header__item'}>
                             <Link href='/software'>ПО</Link>
                         </li>
-                        <li className={router.pathname === '/about' ? 'header__item header__item--active' : 'header__item'}>
-                            <Link href='/about'>О нас</Link>
-                        </li>
                     </ul>
                     <ul className='header__contacts contacts'>
                         <li className="contacts__item">
