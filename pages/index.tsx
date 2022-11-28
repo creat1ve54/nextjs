@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { FC, Fragment, useState } from 'react'
+import { useState } from 'react'
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 

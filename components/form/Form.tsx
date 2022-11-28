@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react'
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { MaskField } from 'react-mask-field';
 
 
 interface FormProps {
@@ -41,20 +42,19 @@ const Form: FC<FormProps> = ({ title, descr }) => {
                         <form className='form__data'>
                             <ul className='form__list'>
                                 <li className='form__item'>
-                                    <input {...register('name', { required: true, minLength: 4, maxLength: 50 })} className='form__input' type="text" placeholder='ФИО' onChange={e => setName(e.target.value)} value={name} />
-                                    {errors.name?.type === 'required' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле ФИО не должно быть пустое</div>}
-                                    {errors.name?.type === 'maxLength' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле ФИО не должно быть больше 50 символов</div>}
-                                    {errors.name?.type === 'minLength' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле ФИО не должно быть меньше 4 символов</div>}
+                                    <input {...register('name', { required: true, maxLength: 50 })} className='form__input' type="text" placeholder='ФИО' onChange={e => setName(e.target.value)} value={name} />
+                                    {errors.name?.type === 'required' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле не должно быть пустое</div>}
+                                    {errors.name?.type === 'maxLength' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Слишком много символов</div>}
                                 </li>
                                 <li className='form__item'>
-                                    <input {...register('phone', { required: true, pattern: /^[\d]{1} \([\d]{2,3}\) [\d]{2,3}-[\d]{2,3}-[\d]{2,3}$/ })} className='form__input' type="text" placeholder='Телефон' onChange={e => setPhone(e.target.value)} value={phone} />
-                                    {errors.phone?.type === 'required' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле Мобильный не должно быть пустое</div>}
-                                    {errors.phone?.type === 'pattern' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле Мобильный не правильной формы</div>}
+                                    <MaskField  {...register('phone', { required: true, minLength: 18 })} className='form__input' type="text" mask="+7 (___) ___-__-__" replacement={{ _: /\d/ }} placeholder='Телефон' onChange={e => setPhone(e.target.value)} value={phone} />
+                                    {errors.phone?.type === 'required' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле не должно быть пустое</div>}
+                                    {errors.phone?.type === 'minLength' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Некорректный номер телефона</div>}
                                 </li>
                                 <li className='form__item'>
                                     <input {...register('email', { required: true, pattern: /^[\w]{1}[\w-.]*@[\w-]+\.[a-z]{2,4}$/i })} className='form__input' type="text" placeholder='E-mail' onChange={e => setEmail(e.target.value)} value={email} />
-                                    {errors.email?.type === 'required' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле E-mail не должно быть пустое</div>}
-                                    {errors.email?.type === 'pattern' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле E-mail не правильной формы</div>}
+                                    {errors.email?.type === 'required' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле не должно быть пустое</div>}
+                                    {errors.email?.type === 'pattern' && <div style={{ color: 'red', top: ' -10px', left: '30px', position: 'relative' }}>Поле не правильной формы</div>}
                                 </li>
                                 <li className='form__item'>
                                     <textarea className='form__input' placeholder='Комментарий' cols={30} rows={10}></textarea>

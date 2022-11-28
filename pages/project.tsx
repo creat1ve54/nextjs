@@ -163,8 +163,8 @@ const Project = () => {
                             <form className='phase__form'>
                                 <h2 className='phase__title'>Начните свой бизнес прямо сейчас</h2>
                                 <input {...register('email', { required: true, pattern: /^[\w]{1}[\w-.]*@[\w-]+\.[a-z]{2,4}$/i })} onChange={e => setEmail(e.target.value)} value={email} className='phase__input' type="text" placeholder='Введите свой E-mail' />
-                                {errors.email?.type === 'required' && <div style={{ color: 'red', top: ' -10px', left: '-14px', position: 'relative', width: '300px' }}>Поле E-mail не должно быть пустое</div>}
-                                {errors.email?.type === 'pattern' && <div style={{ color: 'red', top: ' -10px', left: '-14px', position: 'relative', width: '300px' }}>Поле E-mail не правильной формы</div>}
+                                {errors.email?.type === 'required' && <div style={{ color: 'red', top: ' -10px', left: '17px', position: 'relative', width: '300px' }}>Поле не должно быть пустое</div>}
+                                {errors.email?.type === 'pattern' && <div style={{ color: 'red', top: ' -10px', left: '17px', position: 'relative', width: '300px' }}>Поле не правильной формы</div>}
                                 <ToastContainer position="top-right"
                                     autoClose={3000}
                                     hideProgressBar
